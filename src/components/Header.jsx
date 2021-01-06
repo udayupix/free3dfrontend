@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 
-import {  Link } from "react-router-dom";
+import { Link } from "react-router-dom";
 class Header extends Component {
   state = {};
   render() {
@@ -49,32 +49,30 @@ class Header extends Component {
                   <p className="welcome-msg">Default welcome msg! </p>
 
                   <div className="header-dropdown dropdown-expanded">
-                     <a  href="#/">Links </a>
+                    <a href="#/">Links </a>
                     <div className="header-menu">
-                     
-                       <nav>
-                      <ul>
-                        <li>
-                          <Link to={{pathname:"/accountpage"}} target="/" >MY ACCOUNT  </Link>
-                        </li>
-                        
-                        <li>
-                          <a href="/cart">MY WISHLIST  </a>
-                        </li>
-                      
-                        <li>
-                          <a href="/signup">SIGN UP </a>
-                        </li>
-                        <li>
-                          <a href="/login" >
-                            LOG IN
-                           </a>
-                        </li>
-                      </ul>
-                   
+                      <nav>
+                        <ul>
+                          <li>
+                            <Link to={{ pathname: "/accountpage" }} target="/">
+                              MY ACCOUNT{" "}
+                            </Link>
+                          </li>
+
+                          <li>
+                            <a href="/cart">MY WISHLIST </a>
+                          </li>
+
+                          <li>
+                            <a href="/signup">SIGN UP </a>
+                          </li>
+                          <li>
+                            <a href="/login">LOG IN</a>
+                          </li>
+                        </ul>
                       </nav>
-                       </div>
-                   
+                    </div>
+
                     {/* End .header-menu */}
                   </div>
                   {/* End .header-dropown */}
@@ -93,7 +91,7 @@ class Header extends Component {
                   </button>
                   <a href="/" className="logo">
                     <img src="assets/images/logo.png" alt="Porto Logo" />
-                   </a>
+                  </a>
                 </div>
                 {/* End .header-left */}
 
@@ -101,7 +99,7 @@ class Header extends Component {
                   <div className="header-search">
                     <a href="#/" className="search-toggle" role="button">
                       <i className="icon-magnifier"></i>
-                     </a>
+                    </a>
                     <form action="#/" method="get">
                       <div className="header-search-wrapper">
                         <input
@@ -112,7 +110,7 @@ class Header extends Component {
                           placeholder="I'm searching for..."
                           required
                         />
-                       
+
                         {/* End .select-custom */}
                         <button className="btn" type="submit">
                           <i className="icon-magnifier"></i>
@@ -128,7 +126,7 @@ class Header extends Component {
                 <div className="header-right">
                   <a href="#/" className="porto-icon">
                     <i className="icon icon-heart"></i>
-                   </a>
+                  </a>
 
                   <div className="dropdown cart-dropdown">
                     <a
@@ -142,7 +140,7 @@ class Header extends Component {
                     >
                       <i className="minicart-icon"></i>
                       <span className="cart-count">2</span>
-                     </a>
+                    </a>
 
                     <div className="dropdown-menu">
                       <div className="dropdownmenu-wrapper">
@@ -172,14 +170,14 @@ class Header extends Component {
                                   src="assets/images/products/cart/product-1.jpg"
                                   alt="product"
                                 />
-                               </a>
+                              </a>
                               <a
                                 href="#/"
                                 className="btn-remove"
                                 title="Remove Product"
                               >
                                 <i className="icon-retweet"></i>
-                               </a>
+                              </a>
                             </figure>
                           </div>
                           {/* End .product */}
@@ -203,14 +201,14 @@ class Header extends Component {
                                   src="assets/images/products/cart/product-2.jpg"
                                   alt="product"
                                 />
-                               </a>
+                              </a>
                               <a
                                 href="#/"
                                 className="btn-remove"
                                 title="Remove Product"
                               >
                                 <i className="icon-retweet"></i>
-                               </a>
+                              </a>
                             </figure>
                           </div>
                           {/* End .product */}
@@ -230,7 +228,7 @@ class Header extends Component {
                             className="btn btn-block"
                           >
                             Checkout
-                           </a>
+                          </a>
                         </div>
                         {/* End .dropdown-cart-total */}
                       </div>
@@ -256,7 +254,7 @@ class Header extends Component {
                     <li>
                       <a href="category.html" className="sf-with-ul">
                         Categories
-                       </a>
+                      </a>
                       <div className="megamenu megamenu-fixed-width">
                         <div className="row">
                           <div className="col-lg-8">
@@ -266,24 +264,24 @@ class Header extends Component {
                                   <a href="#/">
                                     Variations 1
                                     <span className="tip tip-new">New!</span>
-                                   </a>
+                                  </a>
                                 </div>
                                 <ul>
                                   <li>
                                     <a href="category.html">
                                       Fullwidth Banner
                                       <span className="tip tip-hot">Hot!</span>
-                                     </a>
+                                    </a>
                                   </li>
                                   <li>
                                     <a href="category-banner-boxed-slider.html">
                                       Boxed Slider Banner
-                                     </a>
+                                    </a>
                                   </li>
                                   <li>
                                     <a href="category-banner-boxed-image.html">
                                       Boxed Image Banner
-                                     </a>
+                                    </a>
                                   </li>
                                   <li>
                                     <a href="category.html">Left Sidebar </a>
@@ -291,22 +289,22 @@ class Header extends Component {
                                   <li>
                                     <a href="category-sidebar-right.html">
                                       Right Sidebar
-                                     </a>
+                                    </a>
                                   </li>
                                   <li>
                                     <a href="category-flex-grid.html">
                                       Product Flex Grid
-                                     </a>
+                                    </a>
                                   </li>
                                   <li>
                                     <a href="category-horizontal-filter1.html">
                                       Horizontal Filter1
-                                     </a>
+                                    </a>
                                   </li>
                                   <li>
                                     <a href="category-horizontal-filter2.html">
                                       Horizontal Filter2
-                                     </a>
+                                    </a>
                                   </li>
                                 </ul>
                               </div>
@@ -322,38 +320,38 @@ class Header extends Component {
                                   <li>
                                     <a href="category-infinite-scroll.html">
                                       Ajax Infinite Scroll
-                                     </a>
+                                    </a>
                                   </li>
                                   <li>
                                     <a href="category-3col.html">
                                       3 Columns Products
-                                     </a>
+                                    </a>
                                   </li>
                                   <li>
                                     <a href="category.html">
                                       4 Columns Products{" "}
                                       <span className="tip tip-new">New</span>
-                                     </a>
+                                    </a>
                                   </li>
                                   <li>
                                     <a href="category-5col.html">
                                       5 Columns Products
-                                     </a>
+                                    </a>
                                   </li>
                                   <li>
                                     <a href="category-6col.html">
                                       6 Columns Products
-                                     </a>
+                                    </a>
                                   </li>
                                   <li>
                                     <a href="category-7col.html">
                                       7 Columns Products
-                                     </a>
+                                    </a>
                                   </li>
                                   <li>
                                     <a href="category-8col.html">
                                       8 Columns Products
-                                     </a>
+                                    </a>
                                   </li>
                                 </ul>
                               </div>
@@ -369,7 +367,7 @@ class Header extends Component {
                                   src="assets/images/menu-banner-2.jpg"
                                   alt="Menu banner"
                                 />
-                               </a>
+                              </a>
                             </div>
                             {/* End .banner */}
                           </div>
@@ -381,7 +379,7 @@ class Header extends Component {
                     <li className="megamenu-container">
                       <a href="product.html" className="sf-with-ul">
                         Products
-                       </a>
+                      </a>
                       <div className="megamenu">
                         <div className="row">
                           <div className="col-lg-8">
@@ -394,13 +392,13 @@ class Header extends Component {
                                   <li>
                                     <a href="product.html">
                                       Horizontal Thumbnails
-                                     </a>
+                                    </a>
                                   </li>
                                   <li>
                                     <a href="product-full-width.html">
                                       Vertical Thumbnails
                                       <span className="tip tip-hot">Hot!</span>
-                                     </a>
+                                    </a>
                                   </li>
                                   <li>
                                     <a href="product.html">Inner Zoom </a>
@@ -408,12 +406,12 @@ class Header extends Component {
                                   <li>
                                     <a href="product-addcart-sticky.html">
                                       Addtocart Sticky
-                                     </a>
+                                    </a>
                                   </li>
                                   <li>
                                     <a href="product-sidebar-left.html">
                                       Accordion Tabs
-                                     </a>
+                                    </a>
                                   </li>
                                 </ul>
                               </div>
@@ -426,17 +424,17 @@ class Header extends Component {
                                   <li>
                                     <a href="product-sticky-tab.html">
                                       Sticky Tabs
-                                     </a>
+                                    </a>
                                   </li>
                                   <li>
                                     <a href="product-simple.html">
                                       Simple Product
-                                     </a>
+                                    </a>
                                   </li>
                                   <li>
                                     <a href="product-sidebar-left.html">
                                       With Left Sidebar
-                                     </a>
+                                    </a>
                                   </li>
                                 </ul>
                               </div>
@@ -452,28 +450,28 @@ class Header extends Component {
                                   <li>
                                     <a href="product-extended-layout.html">
                                       Extended Layout
-                                     </a>
+                                    </a>
                                   </li>
                                   <li>
                                     <a href="product-full-width.html">
                                       Full Width Layout
-                                     </a>
+                                    </a>
                                   </li>
                                   <li>
                                     <a href="product-grid-layout.html">
                                       Grid Images Layout
-                                     </a>
+                                    </a>
                                   </li>
                                   <li>
                                     <a href="product-sticky-both.html">
                                       Sticky Both Side Info
                                       <span className="tip tip-hot">Hot!</span>
-                                     </a>
+                                    </a>
                                   </li>
                                   <li>
                                     <a href="product-sticky-info.html">
                                       Sticky Right Side Info
-                                     </a>
+                                    </a>
                                   </li>
                                 </ul>
                               </div>
@@ -490,7 +488,7 @@ class Header extends Component {
                                   alt="Menu banner"
                                   className="product-promo"
                                 />
-                               </a>
+                              </a>
                             </div>
                             {/* End .banner */}
                           </div>
@@ -503,7 +501,7 @@ class Header extends Component {
                     <li>
                       <a href="#/" className="sf-with-ul">
                         Pages
-                       </a>
+                      </a>
 
                       <ul>
                         <li>
@@ -515,15 +513,17 @@ class Header extends Component {
                             <li>
                               <a href="checkout-shipping.html">
                                 Checkout Shipping
-                               </a>
+                              </a>
                             </li>
                             <li>
                               <a href="checkout-shipping-2.html">
                                 Checkout Shipping 2
-                               </a>
+                              </a>
                             </li>
                             <li>
-                              <a href="checkout-review.html">Checkout Review </a>
+                              <a href="checkout-review.html">
+                                Checkout Review{" "}
+                              </a>
                             </li>
                           </ul>
                         </li>
@@ -558,7 +558,7 @@ class Header extends Component {
                         <li>
                           <a href="#/" className="login-link">
                             Login
-                           </a>
+                          </a>
                         </li>
                         <li>
                           <a href="forgot-password.html">Forgot Password </a>
@@ -568,7 +568,7 @@ class Header extends Component {
                     <li>
                       <a href="#/" className="sf-with-ul">
                         Features
-                       </a>
+                      </a>
                       <ul>
                         <li>
                           <a href="#/">Header Types </a>
@@ -604,12 +604,12 @@ class Header extends Component {
                       <li>
                         <a href="category-banner-boxed-slider.html">
                           Boxed Slider Banner
-                         </a>
+                        </a>
                       </li>
                       <li>
                         <a href="category-banner-boxed-image.html">
                           Boxed Image Banner
-                         </a>
+                        </a>
                       </li>
                       <li>
                         <a href="category.html">Left Sidebar </a>
@@ -623,12 +623,12 @@ class Header extends Component {
                       <li>
                         <a href="category-horizontal-filter1.html">
                           Horizontal Filter 1
-                         </a>
+                        </a>
                       </li>
                       <li>
                         <a href="category-horizontal-filter2.html">
                           Horizontal Filter 2
-                         </a>
+                        </a>
                       </li>
                       <li>
                         <a href="#/">Product List Item Types </a>
@@ -637,7 +637,7 @@ class Header extends Component {
                         <a href="category-infinite-scroll.html">
                           Ajax Infinite Scroll
                           <span className="tip tip-new">New</span>
-                         </a>
+                        </a>
                       </li>
                       <li>
                         <a href="category-3col.html">3 Columns Products </a>
@@ -672,7 +672,7 @@ class Header extends Component {
                             <a href="product-full-width.html">
                               Vertical Thumbnails
                               <span className="tip tip-hot">Hot!</span>
-                             </a>
+                            </a>
                           </li>
                           <li>
                             <a href="product.html">Inner Zoom </a>
@@ -680,12 +680,12 @@ class Header extends Component {
                           <li>
                             <a href="product-addcart-sticky.html">
                               Addtocart Sticky
-                             </a>
+                            </a>
                           </li>
                           <li>
                             <a href="product-sidebar-left.html">
                               Accordion Tabs
-                             </a>
+                            </a>
                           </li>
                         </ul>
                       </li>
@@ -701,7 +701,7 @@ class Header extends Component {
                           <li>
                             <a href="product-sidebar-left.html">
                               With Left Sidebar
-                             </a>
+                            </a>
                           </li>
                         </ul>
                       </li>
@@ -714,28 +714,28 @@ class Header extends Component {
                           <li>
                             <a href="product-extended-layout.html">
                               Extended Layout
-                             </a>
+                            </a>
                           </li>
                           <li>
                             <a href="product-full-width.html">
                               Full Width Layout
-                             </a>
+                            </a>
                           </li>
                           <li>
                             <a href="product-grid-layout.html">
                               Grid Images Layout
-                             </a>
+                            </a>
                           </li>
                           <li>
                             <a href="product-sticky-both.html">
                               Sticky Both Side Info
                               <span className="tip tip-hot">Hot!</span>
-                             </a>
+                            </a>
                           </li>
                           <li>
                             <a href="product-sticky-info.html">
                               Sticky Right Side Info
-                             </a>
+                            </a>
                           </li>
                         </ul>
                       </li>
@@ -744,7 +744,7 @@ class Header extends Component {
                   <li>
                     <a href="#/">
                       Pages<span className="tip tip-hot">Hot!</span>
-                     </a>
+                    </a>
                     <ul>
                       <li>
                         <a href="cart.html">Shopping Cart </a>
@@ -755,12 +755,12 @@ class Header extends Component {
                           <li>
                             <a href="checkout-shipping.html">
                               Checkout Shipping
-                             </a>
+                            </a>
                           </li>
                           <li>
                             <a href="checkout-shipping-2.html">
                               Checkout Shipping 2
-                             </a>
+                            </a>
                           </li>
                           <li>
                             <a href="checkout-review.html">Checkout Review </a>
@@ -773,7 +773,7 @@ class Header extends Component {
                       <li>
                         <a href="#/" className="login-link">
                           Login
-                         </a>
+                        </a>
                       </li>
                       <li>
                         <a href="forgot-password.html">Forgot Password </a>
@@ -795,13 +795,13 @@ class Header extends Component {
               <div className="social-icons">
                 <a href="#/" className="social-icon" target="_blank">
                   <i className="icon-facebook"></i>
-                 </a>
+                </a>
                 <a href="#/" className="social-icon" target="_blank">
                   <i className="icon-twitter"></i>
-                 </a>
+                </a>
                 <a href="#/" className="social-icon" target="_blank">
                   <i className="icon-instagram"></i>
-                 </a>
+                </a>
               </div>
               {/* End .social-icons */}
             </div>

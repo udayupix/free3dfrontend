@@ -6,6 +6,7 @@ import { Link } from "react-router-dom";
 
 class Accountpage extends Component {
   state = {};
+  
   render() {
     return (
       <React.Fragment>
