@@ -55,7 +55,7 @@ class Header extends Component {
                         <ul>
                           <li>
                             <Link to={{ pathname: "/accountpage" }} target="/">
-                              MY ACCOUNT{" "}
+                              MY ACCOUNT
                             </Link>
                           </li>
 
@@ -329,7 +329,7 @@ class Header extends Component {
                                   </li>
                                   <li>
                                     <a href="category.html">
-                                      4 Columns Products{" "}
+                                      4 Columns Products
                                       <span className="tip tip-new">New</span>
                                     </a>
                                   </li>
@@ -522,7 +522,7 @@ class Header extends Component {
                             </li>
                             <li>
                               <a href="checkout-review.html">
-                                Checkout Review{" "}
+                                Checkout Review
                               </a>
                             </li>
                           </ul>
@@ -584,7 +584,7 @@ class Header extends Component {
               {/* End .header-bottom */}
             </div>
             {/* End .header-bottom */}
-          </div>{" "}
+          </div>
           <div className="mobile-menu-container">
             <div className="mobile-menu-wrapper">
               <span className="mobile-menu-close">

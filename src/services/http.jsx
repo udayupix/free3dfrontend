@@ -1,7 +1,7 @@
 import axios from "axios";
 import { toast } from "react-toastify";
 
-axios.defaults.baseURL = "https://back.petstazx.com/v1/api";
+axios.defaults.baseURL = "http://6c4090f31727.ngrok.io/api";
 
 // axios.defaults.baseURL = "http://localhost:3900/api";
 

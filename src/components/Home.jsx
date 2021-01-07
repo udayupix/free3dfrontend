@@ -3,10 +3,17 @@ import Header from "./Header";
 import Footer from "./Footer";
 import Mobileview from "./Mobileview";
 import { Link } from "react-router-dom";
+import posts from "../services/posts";
 
 class Home extends Component {
-  state = {};
-  render() {
+  state = { catts:[]};
+   async componentDidMount()  {
+      const {data}= await posts.cats();
+      this.setState({catts: data})
+  }
+  
+  render() { 
+    const {catts} = this.state;
     return (
       <React.Fragment>
         <body>
@@ -150,7 +157,7 @@ class Home extends Component {
                   </div>
                   <div className="category">
                     <i className="icon-category-electronics"></i>
-                    <span>Electronics</span>
+                    <span>{catts.name}</span>
                   </div>
                   <div className="category">
                     <i className="icon-gift"></i>
