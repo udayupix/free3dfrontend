@@ -6,14 +6,14 @@ import { Link } from "react-router-dom";
 import posts from "../services/posts";
 
 class Home extends Component {
-  state = { catts:[]};
-   async componentDidMount()  {
-      const {data}= await posts.cats();
-      this.setState({catts: data})
+  state = { catts: [] };
+  async componentDidMount() {
+    const { data } = await posts.cats();
+    this.setState({ catts: data });
   }
-  
-  render() { 
-    const {catts} = this.state;
+
+  render() {
+    const { catts } = this.state;
     return (
       <React.Fragment>
         <body>
@@ -116,11 +116,12 @@ class Home extends Component {
                 </div>
               </div>
               {/* End .home-slider */}
-              
-              <section className="categories-container" style={{textAlign:"center"}} ><h2 >Categories</h2> <br/>
-              
+              <section
+                className="categories-container"
+                style={{ textAlign: "center" }}
+              >
+                <h2>Categories</h2> <br />
                 <div
-                
                   className="container categories-carousel owl-carousel owl-theme"
                   data-toggle="owl"
                   data-owl-options="{
@@ -585,8 +586,7 @@ class Home extends Component {
                   </div>
                 </div>
               </section>
-              
-               <section className="product-panel">
+              <section className="product-panel">
                 <div className="container">
                   <div className="section-title">
                     <h2>New Arrivals</h2>
@@ -712,7 +712,7 @@ class Home extends Component {
                           <span className="old-price">$59.00</span>
                           <span className="product-price">$49.00</span>
                         </div>{" "}
-                        {/* End .price-box  */}
+                        {/* End .price-box   */}
                       </div>{" "}
                       {/* End .product-details  */}
                     </div>

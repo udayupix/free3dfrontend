@@ -10,7 +10,7 @@ import Home from "./components/Home";
 import Login from "./components/Login";
 import Singlepost from "./components/Singlepost";
 import Signup from "./components/Signup";
-
+import Add from './components/Add'
 class App extends Component {
   state = {};
   render() {
@@ -27,6 +27,7 @@ class App extends Component {
           <Route path="/forgot" component={Forgotpass} />
           <Route path="/login" component={Login} />
           <Route path="/signup" component={Signup} />
+          <Route path="/add" component={Add} />
         </Switch>
       </Router>
     );
@@ -34,3 +35,4 @@ class App extends Component {
 }
 
 export default App;
+    

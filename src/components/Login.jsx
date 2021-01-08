@@ -3,9 +3,14 @@ import Header from "./Header";
 import Footer from "./Footer";
 import Mobileview from "./Mobileview";
 import { Link } from "react-router-dom";
+import GoogleLogin from 'react-google-login';
+
 
 class Login extends Component {
   state = {};
+  responseGoogle = (response) => {
+    console.log(response);
+  }
   render() {
     return (
       <React.Fragment>
@@ -42,6 +47,13 @@ class Login extends Component {
                     <div className="form-footer" md>
                         <button type="submit" className="btn btn-primary">Submit</button><br/>
                         <button type="submit" className="btn btn-primary">  <Link to="/forgot">Forgot</Link></button>
+                        <GoogleLogin 
+    clientId="711105711427-fma2jj0n05m1hbmlej7fhkbfuvgguqk7.apps.googleusercontent.com"
+    buttonText="Login with Google"
+    onSuccess={this.responseGoogle}
+    onFailure={this.responseGoogle}
+    cookiePolicy={'single_host_origin'}
+  />,
                     </div>{/* End .form-footer */}
 
                 </form>

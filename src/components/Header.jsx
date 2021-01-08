@@ -124,8 +124,16 @@ class Header extends Component {
                 {/* End .headeer-center */}
 
                 <div className="header-right">
+                  
                   <a href="#/" className="porto-icon">
-                    <i className="icon icon-heart"></i>
+                   
+                    <h4 style={{fontStyle:"normal"}}>Free 3D Models</h4>
+                   
+                  </a>
+                  <a href="#/" className="porto-icon">
+                   
+                   
+                   <h4 style={{fontStyle:"normal"}}>Premium 3D models</h4>
                   </a>
 
                   <div className="dropdown cart-dropdown">
@@ -138,7 +146,8 @@ class Header extends Component {
                       aria-expanded="false"
                       data-display="static"
                     >
-                      <i className="minicart-icon"></i>
+                      <i className="minicart-icon" style={{marginBottom: 15}}></i>
+                      
                       <span className="cart-count">2</span>
                     </a>
 

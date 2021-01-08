@@ -4,15 +4,13 @@ import Footer from "./Footer";
 import Mobileview from "./Mobileview";
 import { Link } from "react-router-dom";
 
-
 class Accountpage extends Component {
-  state = {}
-  
+  state = {};
+
   render() {
     return (
       <React.Fragment>
         <body>
-          
           <div className="page-wrapper">
             <Header />
             <main className="main">
@@ -238,7 +236,7 @@ class Accountpage extends Component {
             </main>
             <Footer />
           </div>
-         
+
           <Mobileview />
         </body>
       </React.Fragment>
