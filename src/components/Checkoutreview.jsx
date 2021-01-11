@@ -9,7 +9,7 @@ class Checkoutreview extends Component {
   render() {
     return (
       <React.Fragment>
-        <body>
+        
           <div className="page-wrapper">
             <Header />
             <main className="main">
@@ -228,7 +228,7 @@ class Checkoutreview extends Component {
         
         <Footer /> </div>
         <Mobileview/>
-        </body>
+        
       </React.Fragment>
     );
   }

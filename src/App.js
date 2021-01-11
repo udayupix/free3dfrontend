@@ -11,6 +11,8 @@ import Login from "./components/Login";
 import Singlepost from "./components/Singlepost";
 import Signup from "./components/Signup";
 import Add from './components/Add'
+import Premium from "./components/Premium";
+import Free from "./components/Free";
 class App extends Component {
   state = {};
   render() {
@@ -28,6 +30,8 @@ class App extends Component {
           <Route path="/login" component={Login} />
           <Route path="/signup" component={Signup} />
           <Route path="/add" component={Add} />
+          <Route path="/free" component={Free} />
+          <Route path="/premium" component={Premium} />
         </Switch>
       </Router>
     );

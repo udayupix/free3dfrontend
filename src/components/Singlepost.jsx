@@ -9,7 +9,7 @@ class Singlepost extends Component {
   render() {
     return (
       <React.Fragment>
-        <body>
+        
           <div className="page-wrapper">
             <Header />
             <main className="main">
@@ -636,7 +636,7 @@ class Singlepost extends Component {
         </div>
         
         <Mobileview/>
-        </body>
+        
       </React.Fragment>
     );
   }

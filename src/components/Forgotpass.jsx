@@ -9,7 +9,7 @@ class Forgotpass extends Component {
   render() {
     return (
       <React.Fragment>
-        <body>
+       
           <div className="page-wrapper">
             <Header />
             <main className="main">
@@ -68,7 +68,7 @@ class Forgotpass extends Component {
             <Footer />
           </div>
           <Mobileview />
-        </body>
+       
       </React.Fragment>
     );
   }

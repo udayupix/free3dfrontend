@@ -14,7 +14,7 @@ class Login extends Component {
   render() {
     return (
       <React.Fragment>
-        <body>
+        
           <div className="page-wrapper">
             <Header />
             <main className="main">
@@ -70,7 +70,7 @@ class Login extends Component {
         <Footer/>
         </div>
         <Mobileview/>
-        </body>
+       
 
       </React.Fragment>
     );

@@ -6,20 +6,20 @@ class Header extends Component {
   render() {
     return (
       <React.Fragment>
-        <div className="page-wrapper">
-          <div className="header">
-            <div className="header-top">
-              <div className="container">
+        <div className="page-wrapper ">
+          <div className="header ">
+            <div className="header-top   ">
+              <div className="container " >
                 <div className="header-left header-dropdowns">
                   <div className="header-dropdown">
-                    <a href="#/">USD </a>
+                    <Link to="#/">USD </Link>
                     <div className="header-menu">
                       <ul>
                         <li>
-                          <a href="#/">EUR </a>
+                          <Link to="#/">EUR </Link>
                         </li>
                         <li>
-                          <a href="#/">USD </a>
+                          <Link to="#/">USD </Link>
                         </li>
                       </ul>
                     </div>
@@ -28,14 +28,14 @@ class Header extends Component {
                   {/* End .header-dropown */}
 
                   <div className="header-dropdown">
-                    <a href="#/">ENGLISH </a>
+                    <Link to="#/">ENGLISH </Link>
                     <div className="header-menu">
                       <ul>
                         <li>
-                          <a href="#/">ENGLISH </a>
+                          <Link to="#/">ENGLISH </Link>
                         </li>
                         <li>
-                          <a href="#/">FRENCH </a>
+                          <Link to="#/">FRENCH </Link>
                         </li>
                       </ul>
                     </div>
@@ -49,25 +49,26 @@ class Header extends Component {
                   <p className="welcome-msg">Default welcome msg! </p>
 
                   <div className="header-dropdown dropdown-expanded">
-                    <a href="#/">Links </a>
+                    <Link to="#/">Links </Link>
                     <div className="header-menu">
                       <nav>
                         <ul>
                           <li>
-                            <Link to={{ pathname: "/accountpage" }} target="/">
+                            <Link to="/accountpage" > 
+                            {/* <Link to="/accountpage"> */}
                               MY ACCOUNT
                             </Link>
                           </li>
 
                           <li>
-                            <a href="/cart">MY WISHLIST </a>
+                            <Link to="/cart">MY WISHLIST </Link>
                           </li>
 
                           <li>
-                            <a href="/signup">SIGN UP </a>
+                            <Link to="/signup">SIGN UP </Link>
                           </li>
                           <li>
-                            <a href="/login">LOG IN</a>
+                            <Link to="/login">LOG IN</Link>
                           </li>
                         </ul>
                       </nav>
@@ -89,17 +90,17 @@ class Header extends Component {
                   <button className="mobile-menu-toggler" type="button">
                     <i className="icon-menu"></i>
                   </button>
-                  <a href="/" className="logo">
+                  <Link to="/" className="logo">
                     <img src="assets/images/logo.png" alt="Porto Logo" />
-                  </a>
+                  </Link>
                 </div>
                 {/* End .header-left */}
 
                 <div className="header-center">
                   <div className="header-search">
-                    <a href="#/" className="search-toggle" role="button">
+                    <Link to="#/" className="search-toggle" role="button">
                       <i className="icon-magnifier"></i>
-                    </a>
+                    </Link>
                     <form action="#/" method="get">
                       <div className="header-search-wrapper">
                         <input
@@ -125,20 +126,20 @@ class Header extends Component {
 
                 <div className="header-right">
                   
-                  <a href="#/" className="porto-icon">
+                  <Link to="/free" className="porto-icon">
                    
                     <h4 style={{fontStyle:"normal"}}>Free 3D Models</h4>
                    
-                  </a>
-                  <a href="#/" className="porto-icon">
+                  </Link>
+                  <Link to="/premium" className="porto-icon">
                    
                    
                    <h4 style={{fontStyle:"normal"}}>Premium 3D models</h4>
-                  </a>
+                  </Link>
 
                   <div className="dropdown cart-dropdown">
-                    <a
-                      href="#/"
+                    <Link
+                      to="#/"
                       className="dropdown-toggle"
                       role="button"
                       data-toggle="dropdown"
@@ -149,21 +150,21 @@ class Header extends Component {
                       <i className="minicart-icon" style={{marginBottom: 15}}></i>
                       
                       <span className="cart-count">2</span>
-                    </a>
+                    </Link>
 
                     <div className="dropdown-menu">
                       <div className="dropdownmenu-wrapper">
                         <div className="dropdown-cart-header">
                           <span>2 Items</span>
 
-                          <a href="cart.html">View Cart </a>
+                          <Link to="cart.html">View Cart </Link>
                         </div>
                         {/* End .dropdown-cart-header */}
                         <div className="dropdown-cart-products">
                           <div className="product">
                             <div className="product-details">
                               <h4 className="product-title">
-                                <a href="product.html">Woman Ring </a>
+                                <Link to="product.html">Woman Ring </Link>
                               </h4>
 
                               <span className="cart-product-info">
@@ -174,19 +175,19 @@ class Header extends Component {
                             {/* End .product-details */}
 
                             <figure className="product-image-container">
-                              <a href="product.html" className="product-image">
+                              <Link to="product.html" className="product-image">
                                 <img
                                   src="assets/images/products/cart/product-1.jpg"
                                   alt="product"
                                 />
-                              </a>
-                              <a
-                                href="#/"
+                              </Link>
+                              <Link
+                                to="#/"
                                 className="btn-remove"
                                 title="Remove Product"
                               >
                                 <i className="icon-retweet"></i>
-                              </a>
+                              </Link>
                             </figure>
                           </div>
                           {/* End .product */}
@@ -194,7 +195,7 @@ class Header extends Component {
                           <div className="product">
                             <div className="product-details">
                               <h4 className="product-title">
-                                <a href="product.html">Woman Necklace </a>
+                                <Link to="product.html">Woman Necklace </Link>
                               </h4>
 
                               <span className="cart-product-info">
@@ -205,19 +206,19 @@ class Header extends Component {
                             {/* End .product-details */}
 
                             <figure className="product-image-container">
-                              <a href="product.html" className="product-image">
+                              <Link to="product.html" className="product-image">
                                 <img
                                   src="assets/images/products/cart/product-2.jpg"
                                   alt="product"
                                 />
-                              </a>
-                              <a
-                                href="#/"
+                              </Link>
+                              <Link
+                                to="#/"
                                 className="btn-remove"
                                 title="Remove Product"
                               >
                                 <i className="icon-retweet"></i>
-                              </a>
+                              </Link>
                             </figure>
                           </div>
                           {/* End .product */}
@@ -232,12 +233,12 @@ class Header extends Component {
                         {/* End .dropdown-cart-total */}
 
                         <div className="dropdown-cart-action">
-                          <a
-                            href="checkout-shipping.html"
+                          <Link
+                            to="checkout-shipping.html"
                             className="btn btn-block"
                           >
                             Checkout
-                          </a>
+                          </Link>
                         </div>
                         {/* End .dropdown-cart-total */}
                       </div>
@@ -258,109 +259,109 @@ class Header extends Component {
                 <nav className="main-nav">
                   <ul className="menu sf-arrows">
                     <li className="active">
-                      <a href="/">Home </a>
+                      <Link to="/">Home </Link>
                     </li>
                     <li>
-                      <a href="category.html" className="sf-with-ul">
+                      <Link to="category.html" className="sf-with-ul">
                         Categories
-                      </a>
+                      </Link>
                       <div className="megamenu megamenu-fixed-width">
                         <div className="row">
                           <div className="col-lg-8">
                             <div className="row">
                               <div className="col-lg-6">
                                 <div className="menu-title">
-                                  <a href="#/">
+                                  <Link to="#/">
                                     Variations 1
                                     <span className="tip tip-new">New!</span>
-                                  </a>
+                                  </Link>
                                 </div>
                                 <ul>
                                   <li>
-                                    <a href="category.html">
+                                    <Link to="category.html">
                                       Fullwidth Banner
                                       <span className="tip tip-hot">Hot!</span>
-                                    </a>
+                                    </Link>
                                   </li>
                                   <li>
-                                    <a href="category-banner-boxed-slider.html">
+                                    <Link to="category-banner-boxed-slider.html">
                                       Boxed Slider Banner
-                                    </a>
+                                    </Link>
                                   </li>
                                   <li>
-                                    <a href="category-banner-boxed-image.html">
+                                    <Link to="category-banner-boxed-image.html">
                                       Boxed Image Banner
-                                    </a>
+                                    </Link>
                                   </li>
                                   <li>
-                                    <a href="category.html">Left Sidebar </a>
+                                    <Link to="category.html">Left Sidebar </Link>
                                   </li>
                                   <li>
-                                    <a href="category-sidebar-right.html">
+                                    <Link to="category-sidebar-right.html">
                                       Right Sidebar
-                                    </a>
+                                    </Link>
                                   </li>
                                   <li>
-                                    <a href="category-flex-grid.html">
+                                    <Link to="category-flex-grid.html">
                                       Product Flex Grid
-                                    </a>
+                                    </Link>
                                   </li>
                                   <li>
-                                    <a href="category-horizontal-filter1.html">
+                                    <Link to="category-horizontal-filter1.html">
                                       Horizontal Filter1
-                                    </a>
+                                    </Link>
                                   </li>
                                   <li>
-                                    <a href="category-horizontal-filter2.html">
+                                    <Link to="category-horizontal-filter2.html">
                                       Horizontal Filter2
-                                    </a>
+                                    </Link>
                                   </li>
                                 </ul>
                               </div>
                               {/* End .col-lg-6 */}
                               <div className="col-lg-6">
                                 <div className="menu-title">
-                                  <a href="#/">Variations 2 </a>
+                                  <Link to="#/">Variations 2 </Link>
                                 </div>
                                 <ul>
                                   <li>
-                                    <a href="#/">Product List Item Types </a>
+                                    <Link to="#/">Product List Item Types </Link>
                                   </li>
                                   <li>
-                                    <a href="category-infinite-scroll.html">
+                                    <Link to="category-infinite-scroll.html">
                                       Ajax Infinite Scroll
-                                    </a>
+                                    </Link>
                                   </li>
                                   <li>
-                                    <a href="category-3col.html">
+                                    <Link to="category-3col.html">
                                       3 Columns Products
-                                    </a>
+                                    </Link>
                                   </li>
                                   <li>
-                                    <a href="category.html">
+                                    <Link to="category.html">
                                       4 Columns Products
                                       <span className="tip tip-new">New</span>
-                                    </a>
+                                    </Link>
                                   </li>
                                   <li>
-                                    <a href="category-5col.html">
+                                    <Link to="category-5col.html">
                                       5 Columns Products
-                                    </a>
+                                    </Link>
                                   </li>
                                   <li>
-                                    <a href="category-6col.html">
+                                    <Link to="category-6col.html">
                                       6 Columns Products
-                                    </a>
+                                    </Link>
                                   </li>
                                   <li>
-                                    <a href="category-7col.html">
+                                    <Link to="category-7col.html">
                                       7 Columns Products
-                                    </a>
+                                    </Link>
                                   </li>
                                   <li>
-                                    <a href="category-8col.html">
+                                    <Link to="category-8col.html">
                                       8 Columns Products
-                                    </a>
+                                    </Link>
                                   </li>
                                 </ul>
                               </div>
@@ -371,12 +372,12 @@ class Header extends Component {
                           {/* End .col-lg-8 */}
                           <div className="col-lg-4">
                             <div className="banner">
-                              <a href="#/">
+                              <Link to="#/">
                                 <img
                                   src="assets/images/menu-banner-2.jpg"
                                   alt="Menu banner"
                                 />
-                              </a>
+                              </Link>
                             </div>
                             {/* End .banner */}
                           </div>
@@ -386,101 +387,101 @@ class Header extends Component {
                       {/* End .megamenu */}
                     </li>
                     <li className="megamenu-container">
-                      <a href="product.html" className="sf-with-ul">
+                      <Link to="product.html" className="sf-with-ul">
                         Products
-                      </a>
+                      </Link>
                       <div className="megamenu">
                         <div className="row">
                           <div className="col-lg-8">
                             <div className="row">
                               <div className="col-lg-4">
                                 <div className="menu-title">
-                                  <a href="#/">Variations </a>
+                                  <Link to="#/">Variations </Link>
                                 </div>
                                 <ul>
                                   <li>
-                                    <a href="product.html">
+                                    <Link to="product.html">
                                       Horizontal Thumbnails
-                                    </a>
+                                    </Link>
                                   </li>
                                   <li>
-                                    <a href="product-full-width.html">
+                                    <Link to="product-full-width.html">
                                       Vertical Thumbnails
                                       <span className="tip tip-hot">Hot!</span>
-                                    </a>
+                                    </Link>
                                   </li>
                                   <li>
-                                    <a href="product.html">Inner Zoom </a>
+                                    <Link to="product.html">Inner Zoom </Link>
                                   </li>
                                   <li>
-                                    <a href="product-addcart-sticky.html">
+                                    <Link to="product-addcart-sticky.html">
                                       Addtocart Sticky
-                                    </a>
+                                    </Link>
                                   </li>
                                   <li>
-                                    <a href="product-sidebar-left.html">
+                                    <Link to="product-sidebar-left.html">
                                       Accordion Tabs
-                                    </a>
+                                    </Link>
                                   </li>
                                 </ul>
                               </div>
                               {/* End .col-lg-4 */}
                               <div className="col-lg-4">
                                 <div className="menu-title">
-                                  <a href="#/">Variations </a>
+                                  <Link to="#/">Variations </Link>
                                 </div>
                                 <ul>
                                   <li>
-                                    <a href="product-sticky-tab.html">
+                                    <Link to="product-sticky-tab.html">
                                       Sticky Tabs
-                                    </a>
+                                    </Link>
                                   </li>
                                   <li>
-                                    <a href="product-simple.html">
+                                    <Link to="product-simple.html">
                                       Simple Product
-                                    </a>
+                                    </Link>
                                   </li>
                                   <li>
-                                    <a href="product-sidebar-left.html">
+                                    <Link to="product-sidebar-left.html">
                                       With Left Sidebar
-                                    </a>
+                                    </Link>
                                   </li>
                                 </ul>
                               </div>
                               {/* End .col-lg-4 */}
                               <div className="col-lg-4">
                                 <div className="menu-title">
-                                  <a href="#/">Product Layout Types </a>
+                                  <Link to="#/">Product Layout Types </Link>
                                 </div>
                                 <ul>
                                   <li>
-                                    <a href="product.html">Default Layout </a>
+                                    <Link to="product.html">Default Layout </Link>
                                   </li>
                                   <li>
-                                    <a href="product-extended-layout.html">
+                                    <Link to="product-extended-layout.html">
                                       Extended Layout
-                                    </a>
+                                    </Link>
                                   </li>
                                   <li>
-                                    <a href="product-full-width.html">
+                                    <Link to="product-full-width.html">
                                       Full Width Layout
-                                    </a>
+                                    </Link>
                                   </li>
                                   <li>
-                                    <a href="product-grid-layout.html">
+                                    <Link to="product-grid-layout.html">
                                       Grid Images Layout
-                                    </a>
+                                    </Link>
                                   </li>
                                   <li>
-                                    <a href="product-sticky-both.html">
+                                    <Link to="product-sticky-both.html">
                                       Sticky Both Side Info
                                       <span className="tip tip-hot">Hot!</span>
-                                    </a>
+                                    </Link>
                                   </li>
                                   <li>
-                                    <a href="product-sticky-info.html">
+                                    <Link to="product-sticky-info.html">
                                       Sticky Right Side Info
-                                    </a>
+                                    </Link>
                                   </li>
                                 </ul>
                               </div>
@@ -491,13 +492,13 @@ class Header extends Component {
                           {/* End .col-lg-8 */}
                           <div className="col-lg-4">
                             <div className="banner">
-                              <a href="#/">
+                              <Link to="#/">
                                 <img
                                   src="assets/images/menu-banner.jpg"
                                   alt="Menu banner"
                                   className="product-promo"
                                 />
-                              </a>
+                              </Link>
                             </div>
                             {/* End .banner */}
                           </div>
@@ -508,82 +509,82 @@ class Header extends Component {
                       {/* End .megamenu */}
                     </li>
                     <li>
-                      <a href="#/" className="sf-with-ul">
+                      <Link to="#/" className="sf-with-ul">
                         Pages
-                      </a>
+                      </Link>
 
                       <ul>
                         <li>
-                          <a href="cart.html">Shopping Cart </a>
+                          <Link to="cart.html">Shopping Cart </Link>
                         </li>
                         <li>
-                          <a href="#/">Checkout </a>
+                          <Link to="#/">Checkout </Link>
                           <ul>
                             <li>
-                              <a href="checkout-shipping.html">
+                              <Link to="checkout-shipping.html">
                                 Checkout Shipping
-                              </a>
+                              </Link>
                             </li>
                             <li>
-                              <a href="checkout-shipping-2.html">
+                              <Link to="checkout-shipping-2.html">
                                 Checkout Shipping 2
-                              </a>
+                              </Link>
                             </li>
                             <li>
-                              <a href="checkout-review.html">
+                              <Link to="checkout-review.html">
                                 Checkout Review
-                              </a>
+                              </Link>
                             </li>
                           </ul>
                         </li>
                         <li>
-                          <a href="#/">Dashboard </a>
+                          <Link to="#/">Dashboard </Link>
                           <ul>
                             <li>
-                              <a href="dashboard.html">Dashboard </a>
+                              <Link to="dashboard.html">Dashboard </Link>
                             </li>
                             <li>
-                              <a href="my-account.html">My Account </a>
+                              <Link to="my-account.html">My Account </Link>
                             </li>
                           </ul>
                         </li>
                         <li>
-                          <a href="about.html">About Us </a>
+                          <Link to="about.html">About Us </Link>
                         </li>
                         <li>
-                          <a href="#/">Blog </a>
+                          <Link to="#/">Blog </Link>
                           <ul>
                             <li>
-                              <a href="blog.html">Blog </a>
+                              <Link to="blog.html">Blog </Link>
                             </li>
                             <li>
-                              <a href="single.html">Blog Post </a>
+                              <Link to="single.html">Blog Post </Link>
                             </li>
                           </ul>
                         </li>
                         <li>
-                          <a href="contact.html">Contact Us </a>
+                          <Link to="contact.html">Contact Us </Link>
                         </li>
                         <li>
-                          <a href="#/" className="login-link">
+                          <Link to="#/" className="login-link">
                             Login
-                          </a>
+                          </Link>
                         </li>
                         <li>
-                          <a href="forgot-password.html">Forgot Password </a>
+                          <Link to="forgot-password.html">Forgot Password </Link>
                         </li>
                       </ul>
                     </li>
                     <li>
-                      <a href="#/" className="sf-with-ul">
+                      <Link to="#/" className="sf-with-ul">
                         Features
-                      </a>
+                      </Link>
                       <ul>
                         <li>
-                          <a href="#/">Header Types </a>
+                          <Link to="#/">Header Types </Link>
                         </li>
                         <li>
-                          <a href="#/">Footer Types </a>
+                          <Link to="#/">Footer Types </Link>
                         </li>
                       </ul>
                     </li>
@@ -602,198 +603,198 @@ class Header extends Component {
               <nav className="mobile-nav">
                 <ul className="mobile-menu">
                   <li className="active">
-                    <a href="#/">Home </a>
+                    <Link to="#/">Home </Link>
                   </li>
                   <li>
-                    <a href="category.html">Categories </a>
+                    <Link to="category.html">Categories </Link>
                     <ul>
                       <li>
-                        <a href="category.html">Full Width Banner </a>
+                        <Link to="category.html">Full Width Banner </Link>
                       </li>
                       <li>
-                        <a href="category-banner-boxed-slider.html">
+                        <Link to="category-banner-boxed-slider.html">
                           Boxed Slider Banner
-                        </a>
+                        </Link>
                       </li>
                       <li>
-                        <a href="category-banner-boxed-image.html">
+                        <Link to="category-banner-boxed-image.html">
                           Boxed Image Banner
-                        </a>
+                        </Link>
                       </li>
                       <li>
-                        <a href="category.html">Left Sidebar </a>
+                        <Link to="category.html">Left Sidebar </Link>
                       </li>
                       <li>
-                        <a href="category-sidebar-right.html">Right Sidebar </a>
+                        <Link to="category-sidebar-right.html">Right Sidebar </Link>
                       </li>
                       <li>
-                        <a href="category-flex-grid.html">Product Flex Grid </a>
+                        <Link to="category-flex-grid.html">Product Flex Grid </Link>
                       </li>
                       <li>
-                        <a href="category-horizontal-filter1.html">
+                        <Link to="category-horizontal-filter1.html">
                           Horizontal Filter 1
-                        </a>
+                        </Link>
                       </li>
                       <li>
-                        <a href="category-horizontal-filter2.html">
+                        <Link to="category-horizontal-filter2.html">
                           Horizontal Filter 2
-                        </a>
+                        </Link>
                       </li>
                       <li>
-                        <a href="#/">Product List Item Types </a>
+                        <Link to="#/">Product List Item Types </Link>
                       </li>
                       <li>
-                        <a href="category-infinite-scroll.html">
+                        <Link to="category-infinite-scroll.html">
                           Ajax Infinite Scroll
                           <span className="tip tip-new">New</span>
-                        </a>
+                        </Link>
                       </li>
                       <li>
-                        <a href="category-3col.html">3 Columns Products </a>
+                        <Link to="category-3col.html">3 Columns Products </Link>
                       </li>
                       <li>
-                        <a href="category.html">4 Columns Products </a>
+                        <Link to="category.html">4 Columns Products </Link>
                       </li>
                       <li>
-                        <a href="category-5col.html">5 Columns Products </a>
+                        <Link to="category-5col.html">5 Columns Products </Link>
                       </li>
                       <li>
-                        <a href="category-6col.html">6 Columns Products </a>
+                        <Link to="category-6col.html">6 Columns Products </Link>
                       </li>
                       <li>
-                        <a href="category-7col.html">7 Columns Products </a>
+                        <Link to="category-7col.html">7 Columns Products </Link>
                       </li>
                       <li>
-                        <a href="category-8col.html">8 Columns Products </a>
+                        <Link to="category-8col.html">8 Columns Products </Link>
                       </li>
                     </ul>
                   </li>
                   <li>
-                    <a href="product.html">Products </a>
+                    <Link to="product.html">Products </Link>
                     <ul>
                       <li>
-                        <a href="#/">Variations </a>
+                        <Link to="#/">Variations </Link>
                         <ul>
                           <li>
-                            <a href="product.html">Horizontal Thumbnails </a>
+                            <Link to="product.html">Horizontal Thumbnails </Link>
                           </li>
                           <li>
-                            <a href="product-full-width.html">
+                            <Link to="product-full-width.html">
                               Vertical Thumbnails
                               <span className="tip tip-hot">Hot!</span>
-                            </a>
+                            </Link>
                           </li>
                           <li>
-                            <a href="product.html">Inner Zoom </a>
+                            <Link to="product.html">Inner Zoom </Link>
                           </li>
                           <li>
-                            <a href="product-addcart-sticky.html">
+                            <Link to="product-addcart-sticky.html">
                               Addtocart Sticky
-                            </a>
+                            </Link>
                           </li>
                           <li>
-                            <a href="product-sidebar-left.html">
+                            <Link to="product-sidebar-left.html">
                               Accordion Tabs
-                            </a>
+                            </Link>
                           </li>
                         </ul>
                       </li>
                       <li>
-                        <a href="#/">Variations </a>
+                        <Link to="#/">Variations </Link>
                         <ul>
                           <li>
-                            <a href="product-sticky-tab.html">Sticky Tabs </a>
+                            <Link to="product-sticky-tab.html">Sticky Tabs </Link>
                           </li>
                           <li>
-                            <a href="product-simple.html">Simple Product </a>
+                            <Link to="product-simple.html">Simple Product </Link>
                           </li>
                           <li>
-                            <a href="product-sidebar-left.html">
+                            <Link to="product-sidebar-left.html">
                               With Left Sidebar
-                            </a>
+                            </Link>
                           </li>
                         </ul>
                       </li>
                       <li>
-                        <a href="#/">Product Layout Types </a>
+                        <Link to="#/">Product Layout Types </Link>
                         <ul>
                           <li>
-                            <a href="product.html">Default Layout </a>
+                            <Link to="product.html">Default Layout </Link>
                           </li>
                           <li>
-                            <a href="product-extended-layout.html">
+                            <Link to="product-extended-layout.html">
                               Extended Layout
-                            </a>
+                            </Link>
                           </li>
                           <li>
-                            <a href="product-full-width.html">
+                            <Link to="product-full-width.html">
                               Full Width Layout
-                            </a>
+                            </Link>
                           </li>
                           <li>
-                            <a href="product-grid-layout.html">
+                            <Link to="product-grid-layout.html">
                               Grid Images Layout
-                            </a>
+                            </Link>
                           </li>
                           <li>
-                            <a href="product-sticky-both.html">
+                            <Link to="product-sticky-both.html">
                               Sticky Both Side Info
                               <span className="tip tip-hot">Hot!</span>
-                            </a>
+                            </Link>
                           </li>
                           <li>
-                            <a href="product-sticky-info.html">
+                            <Link to="product-sticky-info.html">
                               Sticky Right Side Info
-                            </a>
+                            </Link>
                           </li>
                         </ul>
                       </li>
                     </ul>
                   </li>
                   <li>
-                    <a href="#/">
+                    <Link to="#/">
                       Pages<span className="tip tip-hot">Hot!</span>
-                    </a>
+                    </Link>
                     <ul>
                       <li>
-                        <a href="cart.html">Shopping Cart </a>
+                        <Link to="cart.html">Shopping Cart </Link>
                       </li>
                       <li>
-                        <a href="#/">Checkout </a>
+                        <Link to="#/">Checkout </Link>
                         <ul>
                           <li>
-                            <a href="checkout-shipping.html">
+                            <Link to="checkout-shipping.html">
                               Checkout Shipping
-                            </a>
+                            </Link>
                           </li>
                           <li>
-                            <a href="checkout-shipping-2.html">
+                            <Link to="checkout-shipping-2.html">
                               Checkout Shipping 2
-                            </a>
+                            </Link>
                           </li>
                           <li>
-                            <a href="checkout-review.html">Checkout Review </a>
+                            <Link to="checkout-review.html">Checkout Review </Link>
                           </li>
                         </ul>
                       </li>
                       <li>
-                        <a href="about.html">About </a>
+                        <Link to="about.html">About </Link>
                       </li>
                       <li>
-                        <a href="#/" className="login-link">
+                        <Link to="#/" className="login-link">
                           Login
-                        </a>
+                        </Link>
                       </li>
                       <li>
-                        <a href="forgot-password.html">Forgot Password </a>
+                        <Link to="forgot-password.html">Forgot Password </Link>
                       </li>
                     </ul>
                   </li>
                   <li>
-                    <a href="blog.html">Blog </a>
+                    <Link to="blog.html">Blog </Link>
                     <ul>
                       <li>
-                        <a href="single.html">Blog Post </a>
+                        <Link to="single.html">Blog Post </Link>
                       </li>
                     </ul>
                   </li>
@@ -802,15 +803,15 @@ class Header extends Component {
               {/* End .mobile-nav */}
 
               <div className="social-icons">
-                <a href="#/" className="social-icon" target="_blank">
+                <Link to="#/" className="social-icon" target="_blank">
                   <i className="icon-facebook"></i>
-                </a>
-                <a href="#/" className="social-icon" target="_blank">
+                </Link>
+                <Link to="#/" className="social-icon" target="_blank">
                   <i className="icon-twitter"></i>
-                </a>
-                <a href="#/" className="social-icon" target="_blank">
+                </Link>
+                <Link to="#/" className="social-icon" target="_blank">
                   <i className="icon-instagram"></i>
-                </a>
+                </Link>
               </div>
               {/* End .social-icons */}
             </div>

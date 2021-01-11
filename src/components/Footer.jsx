@@ -6,7 +6,7 @@ class Footer extends Component {
   render() {
     return (
       <React.Fragment>
-        <footer className="footer">
+        <div className="footer">
           <div className="footer-top">
             <div className="container">
               <div className="row">
@@ -205,7 +205,7 @@ class Footer extends Component {
             </div>
             {/* End .footer-bottom */}
           </div>
-        </footer>
+        </div>
       </React.Fragment>
     );
   }

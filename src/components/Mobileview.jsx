@@ -7,7 +7,7 @@ class Mobileview extends Component {
   render() {
     return (
       <React.Fragment>
-        <body>
+        
           <div className="mobile-menu-overlay"></div>
           {/* End .mobil-menu-overlay */}
 
@@ -255,7 +255,7 @@ class Mobileview extends Component {
       </div>
     </div>
     <Link id="scroll-top" to="#top" title="Top" role="button"><i className="icon-angle-up"></i></Link>
-        </body>
+        
       </React.Fragment>
     );
   }
