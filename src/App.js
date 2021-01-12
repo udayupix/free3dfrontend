@@ -13,6 +13,8 @@ import Signup from "./components/Signup";
 import Add from './components/Add'
 import Premium from "./components/Premium";
 import Free from "./components/Free";
+import FileUpload from "./components/FileUpload";
+
 class App extends Component {
   state = {};
   render() {
@@ -32,6 +34,7 @@ class App extends Component {
           <Route path="/add" component={Add} />
           <Route path="/free" component={Free} />
           <Route path="/premium" component={Premium} />
+          <Route path="/file" component={FileUpload} />
         </Switch>
       </Router>
     );

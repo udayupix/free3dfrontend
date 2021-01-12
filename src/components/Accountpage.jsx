@@ -9,11 +9,9 @@ class Signup extends Component {
   render() {
     return (
       <React.Fragment>
-        
         <div className="page-wrapper">
-        <Header />
+          <Header />
           <main className="main">
-            
             <nav aria-label="breadcrumb" className="breadcrumb-nav">
               <div className="container">
                 <ol className="breadcrumb">
@@ -30,7 +28,6 @@ class Signup extends Component {
               <div className="row">
                 <div className="col-lg-9 order-lg-last dashboard-content">
                   <h2>Edit Account Information</h2>
-
                   <form action="#/">
                     <div className="row">
                       <div className="col-sm-11">
@@ -232,12 +229,10 @@ class Signup extends Component {
             {/* End .container */}
             <div className="mb-5"></div>
           </main>
-       
-
-        <Footer />
         </div>
+        <Footer />
+
         <Mobileview />
-        
       </React.Fragment>
     );
   }

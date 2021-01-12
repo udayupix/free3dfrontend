@@ -9,7 +9,6 @@ class Signup extends Component {
   render() {
     return (
       <React.Fragment>
-        
         <Header />
         <div className="page-wrapper">
           <main className="main">

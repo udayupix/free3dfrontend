@@ -9,7 +9,7 @@ class Header extends Component {
         <div className="page-wrapper ">
           <div className="header ">
             <div className="header-top   ">
-              <div className="container " >
+              <div className="container ">
                 <div className="header-left header-dropdowns">
                   <div className="header-dropdown">
                     <Link to="#/">USD </Link>
@@ -54,8 +54,8 @@ class Header extends Component {
                       <nav>
                         <ul>
                           <li>
-                            <Link to="/accountpage" > 
-                            {/* <Link to="/accountpage"> */}
+                            <Link to="/accountpage">
+                              {/* <Link to="/accountpage"> */}
                               MY ACCOUNT
                             </Link>
                           </li>
@@ -125,16 +125,11 @@ class Header extends Component {
                 {/* End .headeer-center */}
 
                 <div className="header-right">
-                  
                   <Link to="/free" className="porto-icon">
-                   
-                    <h4 style={{fontStyle:"normal"}}>Free 3D Models</h4>
-                   
+                    <h4 style={{ fontStyle: "normal" }}>Free 3D Models</h4>
                   </Link>
                   <Link to="/premium" className="porto-icon">
-                   
-                   
-                   <h4 style={{fontStyle:"normal"}}>Premium 3D models</h4>
+                    <h4 style={{ fontStyle: "normal" }}>Premium 3D models</h4>
                   </Link>
 
                   <div className="dropdown cart-dropdown">
@@ -147,8 +142,11 @@ class Header extends Component {
                       aria-expanded="false"
                       data-display="static"
                     >
-                      <i className="minicart-icon" style={{marginBottom: 15}}></i>
-                      
+                      <i
+                        className="minicart-icon"
+                        style={{ marginBottom: 15 }}
+                      ></i>
+
                       <span className="cart-count">2</span>
                     </Link>
 
@@ -164,7 +162,7 @@ class Header extends Component {
                           <div className="product">
                             <div className="product-details">
                               <h4 className="product-title">
-                                <Link to="product.html">Woman Ring </Link>
+                                <Link to="#/">Woman Ring </Link>
                               </h4>
 
                               <span className="cart-product-info">
@@ -175,7 +173,7 @@ class Header extends Component {
                             {/* End .product-details */}
 
                             <figure className="product-image-container">
-                              <Link to="product.html" className="product-image">
+                              <Link to="#/" className="product-image">
                                 <img
                                   src="assets/images/products/cart/product-1.jpg"
                                   alt="product"
@@ -195,7 +193,7 @@ class Header extends Component {
                           <div className="product">
                             <div className="product-details">
                               <h4 className="product-title">
-                                <Link to="product.html">Woman Necklace </Link>
+                                <Link to="#/">Woman Necklace </Link>
                               </h4>
 
                               <span className="cart-product-info">
@@ -206,7 +204,7 @@ class Header extends Component {
                             {/* End .product-details */}
 
                             <figure className="product-image-container">
-                              <Link to="product.html" className="product-image">
+                              <Link to="#/" className="product-image">
                                 <img
                                   src="assets/images/products/cart/product-2.jpg"
                                   alt="product"
@@ -233,10 +231,7 @@ class Header extends Component {
                         {/* End .dropdown-cart-total */}
 
                         <div className="dropdown-cart-action">
-                          <Link
-                            to="checkout-shipping.html"
-                            className="btn btn-block"
-                          >
+                          <Link to="/cart" className="btn btn-block">
                             Checkout
                           </Link>
                         </div>
@@ -262,7 +257,7 @@ class Header extends Component {
                       <Link to="/">Home </Link>
                     </li>
                     <li>
-                      <Link to="category.html" className="sf-with-ul">
+                      <Link to="#/" className="sf-with-ul">
                         Categories
                       </Link>
                       <div className="megamenu megamenu-fixed-width">
@@ -278,43 +273,31 @@ class Header extends Component {
                                 </div>
                                 <ul>
                                   <li>
-                                    <Link to="category.html">
+                                    <Link to="#/">
                                       Fullwidth Banner
                                       <span className="tip tip-hot">Hot!</span>
                                     </Link>
                                   </li>
                                   <li>
-                                    <Link to="category-banner-boxed-slider.html">
-                                      Boxed Slider Banner
-                                    </Link>
+                                    <Link to="#/">Boxed Slider Banner</Link>
                                   </li>
                                   <li>
-                                    <Link to="category-banner-boxed-image.html">
-                                      Boxed Image Banner
-                                    </Link>
+                                    <Link to="#/">Boxed Image Banner</Link>
                                   </li>
                                   <li>
-                                    <Link to="category.html">Left Sidebar </Link>
+                                    <Link to="#/">Left Sidebar</Link>
                                   </li>
                                   <li>
-                                    <Link to="category-sidebar-right.html">
-                                      Right Sidebar
-                                    </Link>
+                                    <Link to="#/">Right Sidebar</Link>
                                   </li>
                                   <li>
-                                    <Link to="category-flex-grid.html">
-                                      Product Flex Grid
-                                    </Link>
+                                    <Link to="#/">Product Flex Grid</Link>
                                   </li>
                                   <li>
-                                    <Link to="category-horizontal-filter1.html">
-                                      Horizontal Filter1
-                                    </Link>
+                                    <Link to="#/">Horizontal Filter1</Link>
                                   </li>
                                   <li>
-                                    <Link to="category-horizontal-filter2.html">
-                                      Horizontal Filter2
-                                    </Link>
+                                    <Link to="#/">Horizontal Filter2</Link>
                                   </li>
                                 </ul>
                               </div>
@@ -325,7 +308,7 @@ class Header extends Component {
                                 </div>
                                 <ul>
                                   <li>
-                                    <Link to="#/">Product List Item Types </Link>
+                                    <Link to="#/">Product List Item Types</Link>
                                   </li>
                                   <li>
                                     <Link to="category-infinite-scroll.html">
@@ -333,35 +316,25 @@ class Header extends Component {
                                     </Link>
                                   </li>
                                   <li>
-                                    <Link to="category-3col.html">
-                                      3 Columns Products
-                                    </Link>
+                                    <Link to="#/">3 Columns Products</Link>
                                   </li>
                                   <li>
-                                    <Link to="category.html">
+                                    <Link to="#/">
                                       4 Columns Products
                                       <span className="tip tip-new">New</span>
                                     </Link>
                                   </li>
                                   <li>
-                                    <Link to="category-5col.html">
-                                      5 Columns Products
-                                    </Link>
+                                    <Link to="#/">5 Columns Products</Link>
                                   </li>
                                   <li>
-                                    <Link to="category-6col.html">
-                                      6 Columns Products
-                                    </Link>
+                                    <Link to="#/">6 Columns Products</Link>
                                   </li>
                                   <li>
-                                    <Link to="category-7col.html">
-                                      7 Columns Products
-                                    </Link>
+                                    <Link to="#/">7 Columns Products</Link>
                                   </li>
                                   <li>
-                                    <Link to="category-8col.html">
-                                      8 Columns Products
-                                    </Link>
+                                    <Link to="#/">8 Columns Products</Link>
                                   </li>
                                 </ul>
                               </div>
@@ -387,7 +360,7 @@ class Header extends Component {
                       {/* End .megamenu */}
                     </li>
                     <li className="megamenu-container">
-                      <Link to="product.html" className="sf-with-ul">
+                      <Link to="#/" className="sf-with-ul">
                         Products
                       </Link>
                       <div className="megamenu">
@@ -400,28 +373,22 @@ class Header extends Component {
                                 </div>
                                 <ul>
                                   <li>
-                                    <Link to="product.html">
-                                      Horizontal Thumbnails
-                                    </Link>
+                                    <Link to="#/">Horizontal Thumbnails</Link>
                                   </li>
                                   <li>
-                                    <Link to="product-full-width.html">
+                                    <Link to="#/">
                                       Vertical Thumbnails
                                       <span className="tip tip-hot">Hot!</span>
                                     </Link>
                                   </li>
                                   <li>
-                                    <Link to="product.html">Inner Zoom </Link>
+                                    <Link to="#/">Inner Zoom </Link>
                                   </li>
                                   <li>
-                                    <Link to="product-addcart-sticky.html">
-                                      Addtocart Sticky
-                                    </Link>
+                                    <Link to="#/">Addtocart Sticky</Link>
                                   </li>
                                   <li>
-                                    <Link to="product-sidebar-left.html">
-                                      Accordion Tabs
-                                    </Link>
+                                    <Link to="#/">Accordion Tabs</Link>
                                   </li>
                                 </ul>
                               </div>
@@ -432,19 +399,13 @@ class Header extends Component {
                                 </div>
                                 <ul>
                                   <li>
-                                    <Link to="product-sticky-tab.html">
-                                      Sticky Tabs
-                                    </Link>
+                                    <Link to="#/">Sticky Tabs</Link>
                                   </li>
                                   <li>
-                                    <Link to="product-simple.html">
-                                      Simple Product
-                                    </Link>
+                                    <Link to="p#/">Simple Product</Link>
                                   </li>
                                   <li>
-                                    <Link to="product-sidebar-left.html">
-                                      With Left Sidebar
-                                    </Link>
+                                    <Link to="#/">With Left Sidebar</Link>
                                   </li>
                                 </ul>
                               </div>
@@ -455,33 +416,25 @@ class Header extends Component {
                                 </div>
                                 <ul>
                                   <li>
-                                    <Link to="product.html">Default Layout </Link>
+                                    <Link to="#/">Default Layout</Link>
                                   </li>
                                   <li>
-                                    <Link to="product-extended-layout.html">
-                                      Extended Layout
-                                    </Link>
+                                    <Link to="#/">Extended Layout</Link>
                                   </li>
                                   <li>
-                                    <Link to="product-full-width.html">
-                                      Full Width Layout
-                                    </Link>
+                                    <Link to="#/">Full Width Layout</Link>
                                   </li>
                                   <li>
-                                    <Link to="product-grid-layout.html">
-                                      Grid Images Layout
-                                    </Link>
+                                    <Link to="#/">Grid Images Layout</Link>
                                   </li>
                                   <li>
-                                    <Link to="product-sticky-both.html">
+                                    <Link to="#/">
                                       Sticky Both Side Info
                                       <span className="tip tip-hot">Hot!</span>
                                     </Link>
                                   </li>
                                   <li>
-                                    <Link to="product-sticky-info.html">
-                                      Sticky Right Side Info
-                                    </Link>
+                                    <Link to="p#/">Sticky Right Side Info</Link>
                                   </li>
                                 </ul>
                               </div>
@@ -515,15 +468,13 @@ class Header extends Component {
 
                       <ul>
                         <li>
-                          <Link to="cart.html">Shopping Cart </Link>
+                          <Link to="/cart">Shopping Cart </Link>
                         </li>
                         <li>
                           <Link to="#/">Checkout </Link>
                           <ul>
                             <li>
-                              <Link to="checkout-shipping.html">
-                                Checkout Shipping
-                              </Link>
+                              <Link to="/cart">Checkout Shipping</Link>
                             </li>
                             <li>
                               <Link to="checkout-shipping-2.html">
@@ -571,7 +522,7 @@ class Header extends Component {
                           </Link>
                         </li>
                         <li>
-                          <Link to="forgot-password.html">Forgot Password </Link>
+                          <Link to="forgot-password.html">Forgot Password</Link>
                         </li>
                       </ul>
                     </li>
@@ -594,230 +545,233 @@ class Header extends Component {
               {/* End .header-bottom */}
             </div>
             {/* End .header-bottom */}
-          </div>
-          <div className="mobile-menu-container">
-            <div className="mobile-menu-wrapper">
-              <span className="mobile-menu-close">
-                <i className="icon-retweet"></i>
-              </span>
-              <nav className="mobile-nav">
-                <ul className="mobile-menu">
-                  <li className="active">
-                    <Link to="#/">Home </Link>
-                  </li>
-                  <li>
-                    <Link to="category.html">Categories </Link>
-                    <ul>
-                      <li>
-                        <Link to="category.html">Full Width Banner </Link>
-                      </li>
-                      <li>
-                        <Link to="category-banner-boxed-slider.html">
-                          Boxed Slider Banner
-                        </Link>
-                      </li>
-                      <li>
-                        <Link to="category-banner-boxed-image.html">
-                          Boxed Image Banner
-                        </Link>
-                      </li>
-                      <li>
-                        <Link to="category.html">Left Sidebar </Link>
-                      </li>
-                      <li>
-                        <Link to="category-sidebar-right.html">Right Sidebar </Link>
-                      </li>
-                      <li>
-                        <Link to="category-flex-grid.html">Product Flex Grid </Link>
-                      </li>
-                      <li>
-                        <Link to="category-horizontal-filter1.html">
-                          Horizontal Filter 1
-                        </Link>
-                      </li>
-                      <li>
-                        <Link to="category-horizontal-filter2.html">
-                          Horizontal Filter 2
-                        </Link>
-                      </li>
-                      <li>
-                        <Link to="#/">Product List Item Types </Link>
-                      </li>
-                      <li>
-                        <Link to="category-infinite-scroll.html">
-                          Ajax Infinite Scroll
-                          <span className="tip tip-new">New</span>
-                        </Link>
-                      </li>
-                      <li>
-                        <Link to="category-3col.html">3 Columns Products </Link>
-                      </li>
-                      <li>
-                        <Link to="category.html">4 Columns Products </Link>
-                      </li>
-                      <li>
-                        <Link to="category-5col.html">5 Columns Products </Link>
-                      </li>
-                      <li>
-                        <Link to="category-6col.html">6 Columns Products </Link>
-                      </li>
-                      <li>
-                        <Link to="category-7col.html">7 Columns Products </Link>
-                      </li>
-                      <li>
-                        <Link to="category-8col.html">8 Columns Products </Link>
-                      </li>
-                    </ul>
-                  </li>
-                  <li>
-                    <Link to="product.html">Products </Link>
-                    <ul>
-                      <li>
-                        <Link to="#/">Variations </Link>
-                        <ul>
-                          <li>
-                            <Link to="product.html">Horizontal Thumbnails </Link>
-                          </li>
-                          <li>
-                            <Link to="product-full-width.html">
-                              Vertical Thumbnails
-                              <span className="tip tip-hot">Hot!</span>
-                            </Link>
-                          </li>
-                          <li>
-                            <Link to="product.html">Inner Zoom </Link>
-                          </li>
-                          <li>
-                            <Link to="product-addcart-sticky.html">
-                              Addtocart Sticky
-                            </Link>
-                          </li>
-                          <li>
-                            <Link to="product-sidebar-left.html">
-                              Accordion Tabs
-                            </Link>
-                          </li>
-                        </ul>
-                      </li>
-                      <li>
-                        <Link to="#/">Variations </Link>
-                        <ul>
-                          <li>
-                            <Link to="product-sticky-tab.html">Sticky Tabs </Link>
-                          </li>
-                          <li>
-                            <Link to="product-simple.html">Simple Product </Link>
-                          </li>
-                          <li>
-                            <Link to="product-sidebar-left.html">
-                              With Left Sidebar
-                            </Link>
-                          </li>
-                        </ul>
-                      </li>
-                      <li>
-                        <Link to="#/">Product Layout Types </Link>
-                        <ul>
-                          <li>
-                            <Link to="product.html">Default Layout </Link>
-                          </li>
-                          <li>
-                            <Link to="product-extended-layout.html">
-                              Extended Layout
-                            </Link>
-                          </li>
-                          <li>
-                            <Link to="product-full-width.html">
-                              Full Width Layout
-                            </Link>
-                          </li>
-                          <li>
-                            <Link to="product-grid-layout.html">
-                              Grid Images Layout
-                            </Link>
-                          </li>
-                          <li>
-                            <Link to="product-sticky-both.html">
-                              Sticky Both Side Info
-                              <span className="tip tip-hot">Hot!</span>
-                            </Link>
-                          </li>
-                          <li>
-                            <Link to="product-sticky-info.html">
-                              Sticky Right Side Info
-                            </Link>
-                          </li>
-                        </ul>
-                      </li>
-                    </ul>
-                  </li>
-                  <li>
-                    <Link to="#/">
-                      Pages<span className="tip tip-hot">Hot!</span>
-                    </Link>
-                    <ul>
-                      <li>
-                        <Link to="cart.html">Shopping Cart </Link>
-                      </li>
-                      <li>
-                        <Link to="#/">Checkout </Link>
-                        <ul>
-                          <li>
-                            <Link to="checkout-shipping.html">
-                              Checkout Shipping
-                            </Link>
-                          </li>
-                          <li>
-                            <Link to="checkout-shipping-2.html">
-                              Checkout Shipping 2
-                            </Link>
-                          </li>
-                          <li>
-                            <Link to="checkout-review.html">Checkout Review </Link>
-                          </li>
-                        </ul>
-                      </li>
-                      <li>
-                        <Link to="about.html">About </Link>
-                      </li>
-                      <li>
-                        <Link to="#/" className="login-link">
-                          Login
-                        </Link>
-                      </li>
-                      <li>
-                        <Link to="forgot-password.html">Forgot Password </Link>
-                      </li>
-                    </ul>
-                  </li>
-                  <li>
-                    <Link to="blog.html">Blog </Link>
-                    <ul>
-                      <li>
-                        <Link to="single.html">Blog Post </Link>
-                      </li>
-                    </ul>
-                  </li>
-                </ul>
-              </nav>
-              {/* End .mobile-nav */}
 
-              <div className="social-icons">
-                <Link to="#/" className="social-icon" target="_blank">
-                  <i className="icon-facebook"></i>
-                </Link>
-                <Link to="#/" className="social-icon" target="_blank">
-                  <i className="icon-twitter"></i>
-                </Link>
-                <Link to="#/" className="social-icon" target="_blank">
-                  <i className="icon-instagram"></i>
-                </Link>
+            <div className="mobile-menu-container">
+              <div className="mobile-menu-wrapper">
+                <span className="mobile-menu-close">
+                  <i className="icon-retweet"></i>
+                </span>
+                <nav className="mobile-nav">
+                  <ul className="mobile-menu">
+                    <li className="active">
+                      <Link to="#/">Home </Link>
+                    </li>
+                    <li>
+                      <Link to="category.html">Categories </Link>
+                      <ul>
+                        <li>
+                          <Link to="category.html">Full Width Banner </Link>
+                        </li>
+                        <li>
+                          <Link to="category-banner-boxed-slider.html">
+                            Boxed Slider Banner
+                          </Link>
+                        </li>
+                        <li>
+                          <Link to="category-banner-boxed-image.html">
+                            Boxed Image Banner
+                          </Link>
+                        </li>
+                        <li>
+                          <Link to="category.html">Left Sidebar </Link>
+                        </li>
+                        <li>
+                          <Link to="category-sidebar-right.html">
+                            Right Sidebar
+                          </Link>
+                        </li>
+                        <li>
+                          <Link to="category-flex-grid.html">
+                            Product Flex Grid
+                          </Link>
+                        </li>
+                        <li>
+                          <Link to="category-horizontal-filter1.html">
+                            Horizontal Filter 1
+                          </Link>
+                        </li>
+                        <li>
+                          <Link to="category-horizontal-filter2.html">
+                            Horizontal Filter 2
+                          </Link>
+                        </li>
+                        <li>
+                          <Link to="#/">Product List Item Types </Link>
+                        </li>
+                        <li>
+                          <Link to="category-infinite-scroll.html">
+                            Ajax Infinite Scroll
+                            <span className="tip tip-new">New</span>
+                          </Link>
+                        </li>
+                        <li>
+                          <Link to="category-3col.html">
+                            3 Columns Products{" "}
+                          </Link>
+                        </li>
+                        <li>
+                          <Link to="category.html">4 Columns Products </Link>
+                        </li>
+                        <li>
+                          <Link to="category-5col.html">
+                            5 Columns Products{" "}
+                          </Link>
+                        </li>
+                        <li>
+                          <Link to="category-6col.html">
+                            6 Columns Products{" "}
+                          </Link>
+                        </li>
+                        <li>
+                          <Link to="category-7col.html">
+                            7 Columns Products{" "}
+                          </Link>
+                        </li>
+                        <li>
+                          <Link to="category-8col.html">
+                            8 Columns Products{" "}
+                          </Link>
+                        </li>
+                      </ul>
+                    </li>
+                    <li>
+                      <Link to="#/">Products </Link>
+                      <ul>
+                        <li>
+                          <Link to="#/">Variations </Link>
+                          <ul>
+                            <li>
+                              <Link to="#/">Horizontal Thumbnails</Link>
+                            </li>
+                            <li>
+                              <Link to="#/">
+                                Vertical Thumbnails
+                                <span className="tip tip-hot">Hot!</span>
+                              </Link>
+                            </li>
+                            <li>
+                              <Link to="#/">Inner Zoom </Link>
+                            </li>
+                            <li>
+                              <Link to="#/">Addtocart Sticky</Link>
+                            </li>
+                            <li>
+                              <Link to="#/">Accordion Tabs</Link>
+                            </li>
+                          </ul>
+                        </li>
+                        <li>
+                          <Link to="#/">Variations </Link>
+                          <ul>
+                            <li>
+                              <Link to="#/">Sticky Tabs</Link>
+                            </li>
+                            <li>
+                              <Link to="p#/">Simple Product</Link>
+                            </li>
+                            <li>
+                              <Link to="#/">With Left Sidebar</Link>
+                            </li>
+                          </ul>
+                        </li>
+                        <li>
+                          <Link to="#/">Product Layout Types </Link>
+                          <ul>
+                            <li>
+                              <Link to="#/">Default Layout </Link>
+                            </li>
+                            <li>
+                              <Link to="#/">Extended Layout</Link>
+                            </li>
+                            <li>
+                              <Link to="#/">Full Width Layout</Link>
+                            </li>
+                            <li>
+                              <Link to="#/">Grid Images Layout</Link>
+                            </li>
+                            <li>
+                              <Link to="#/">
+                                Sticky Both Side Info
+                                <span className="tip tip-hot">Hot!</span>
+                              </Link>
+                            </li>
+                            <li>
+                              <Link to="p#/">Sticky Right Side Info</Link>
+                            </li>
+                          </ul>
+                        </li>
+                      </ul>
+                    </li>
+                    <li>
+                      <Link to="#/">
+                        Pages<span className="tip tip-hot">Hot!</span>
+                      </Link>
+                      <ul>
+                        <li>
+                          <Link to="cart.html">Shopping Cart </Link>
+                        </li>
+                        <li>
+                          <Link to="#/">Checkout </Link>
+                          <ul>
+                            <li>
+                              <Link to="/cart">Checkout Shipping</Link>
+                            </li>
+                            <li>
+                              <Link to="checkout-shipping-2.html">
+                                Checkout Shipping 2
+                              </Link>
+                            </li>
+                            <li>
+                              <Link to="checkout-review.html">
+                                Checkout Review
+                              </Link>
+                            </li>
+                          </ul>
+                        </li>
+                        <li>
+                          <Link to="about.html">About </Link>
+                        </li>
+                        <li>
+                          <Link to="#/" className="login-link">
+                            Login
+                          </Link>
+                        </li>
+                        <li>
+                          <Link to="forgot-password.html">
+                            Forgot Password{" "}
+                          </Link>
+                        </li>
+                      </ul>
+                    </li>
+                    <li>
+                      <Link to="blog.html">Blog </Link>
+                      <ul>
+                        <li>
+                          <Link to="single.html">Blog Post </Link>
+                        </li>
+                      </ul>
+                    </li>
+                  </ul>
+                </nav>
+                {/* End .mobile-nav */}
+
+                <div className="social-icons">
+                  <Link to="#/" className="social-icon" target="_blank">
+                    <i className="icon-facebook"></i>
+                  </Link>
+                  <Link to="#/" className="social-icon" target="_blank">
+                    <i className="icon-twitter"></i>
+                  </Link>
+                  <Link to="#/" className="social-icon" target="_blank">
+                    <i className="icon-instagram"></i>
+                  </Link>
+                </div>
+                {/* End .social-icons */}
               </div>
-              {/* End .social-icons */}
+              {/* End .mobile-menu-wrapper */}
             </div>
-            {/* End .mobile-menu-wrapper */}
+            {/* End .mobile-menu-container */}
           </div>
-          {/* End .mobile-menu-container */}
         </div>
       </React.Fragment>
     );
