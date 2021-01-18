@@ -388,7 +388,8 @@ class Home extends Component {
                           <Link to="category.html" className="product-category">
                             category
                           </Link>
-                        </div>
+                        </div> 
+                        {/* this */}
                         <Link to="#/" className="btn-icon-wish">
                           <i className="icon-heart"></i>
                         </Link>
