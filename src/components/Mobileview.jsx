@@ -279,9 +279,9 @@ class Mobileview extends Component {
             </div>
           </div>
         </div>
-        <Link id="scroll-top" to="#top" title="Top" role="button">
+        <a id="scroll-top" href="#top" title="Top" role="button">
           <i className="icon-angle-up"></i>
-        </Link>
+        </a>
       </React.Fragment>
     );
   }

@@ -487,12 +487,12 @@ class Home extends Component {
                 <div className="product-intro divide-line mt-2 mb-8">
                   <div className="col-6 col-lg-2 col-md-3 col-sm-4 product-default inner-quickview inner-icon">
                     <figure>
-                      <Link to="product.html">
+                      <a href="product.html">
                         <img
                           src="assets/images/products/product-7.jpg"
                           alt="ss"
                         />
-                      </Link>
+                      </a>
                       <div className="btn-icon-group">
                         <button
                           className="btn-icon btn-add-cart"
