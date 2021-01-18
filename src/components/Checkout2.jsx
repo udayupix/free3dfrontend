@@ -16,7 +16,7 @@ class Checkout2 extends Component {
             <nav aria-label="breadcrumb" className="breadcrumb-nav mb-2">
                 <div className="container">
                     <ol className="breadcrumb">
-                        <li className="breadcrumb-item"> <Link  to="index-2.html">Home </Link ></li>
+                        <li className="breadcrumb-item"> <Link  to="/">Home </Link ></li>
                         <li className="breadcrumb-item active" aria-current="page">Checkout</li>
                     </ol>
                 </div>

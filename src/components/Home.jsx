@@ -5,6 +5,7 @@ import Mobileview from "./Mobileview";
 import { Link } from "react-router-dom";
 import posts from "../services/posts";
 
+
 class Home extends Component {
   state = { catts: [] };
   async componentDidMount() {
@@ -16,99 +17,15 @@ class Home extends Component {
     const { catts } = this.state;
     return (
       <React.Fragment>
+        
         <div className="page-wrapper">
           <Header />
           <main className="main home">
             <div className="home-top-container">
-              <div className="home-slider owl-carousel owl-theme owl-carousel-lazy">
-                <div
-                  className="home-slide"
-                  style={{
-                    backgroundImage: "url('assets/images/slider/slide1.jpg')",
-                  }}
-                >
-                  <img
-                    className="owl-lazy"
-                    src="assets/images/lazy.png"
-                    alt="imss"
-                  />
-                  <div className="home-slide-content container">
-                    <div>
-                      <h2 className="home-slide-subtitle">
-                        start the revolution
-                      </h2>
-                      <h1 className="home-slide-title">drone pro 4</h1>
-                      <h2 className="home-slide-foot">
-                        from <span>$499</span>
-                      </h2>
-                      <button className="btn btn-dark btn-buy">BUY NOW</button>
-                    </div>
-                  </div>
-                  {/* End .home-slide-content */}
-                </div>
-                {/* End .home-slide */}
-
-                <div
-                  className="home-slide"
-                  style={{
-                    backgroundImage: "url('assets/images/slider/slide2.jpg')",
-                  }}
-                >
-                  <img
-                    className="owl-lazy"
-                    src="assets/images/lazy.png"
-                    alt="imss"
-                  />
-                  <div className="home-slide-content container">
-                    <div>
-                      <h2 className="home-slide-subtitle">amazing deals</h2>
-                      <h1 className="home-slide-title">smartphone</h1>
-                      <h2 className="home-slide-foot">
-                        from <span>$199</span>
-                      </h2>
-                      <button className="btn btn-dark btn-buy">BUY NOW</button>
-                    </div>
-                  </div>
-                  {/* End .home-slide-content */}
-                </div>
-                {/* End .home-slide */}
-
-                <div
-                  className="home-slide"
-                  style={{
-                    backgroundImage: "url('assets/images/slider/slide3.jpg')",
-                  }}
-                >
-                  <img
-                    className="owl-lazy"
-                    src="assets/images/lazy.png"
-                    alt="imss"
-                  />
-                  <div className="home-slide-content container">
-                    <div>
-                      <h2 className="home-slide-subtitle">
-                        best price of the year
-                      </h2>
-                      <h1 className="home-slide-title">top accessories</h1>
-                      <h2 className="home-slide-foot">
-                        from <span>$19</span>
-                      </h2>
-                      <button className="btn btn-dark btn-buy">BUY NOW</button>
-                    </div>
-                  </div>
-                  {/* End .home-slide-content */}
-                </div>
-                {/* End .home-slide */}
-              </div>
-              <div className="home-slider-sidebar">
-                <ul>
-                  <li className="active">Drones</li>
-                  <li>Phones</li>
-                  <li>Accessories</li>
-                </ul>
-              </div>
+              
+             
             </div>
-            {/* End .home-slider */}
+           
             <section
               className="categories-container"
               style={{ textAlign: "center" }}

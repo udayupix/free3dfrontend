@@ -249,7 +249,7 @@ class Header extends Component {
             </div>
             {/* End .header-middle */}
 
-            <div className="header-bottom sticky-header">
+            {/* <div className="header-bottom sticky-header">
               <div className="container">
                 <nav className="main-nav">
                   <ul className="menu sf-arrows">
@@ -301,7 +301,7 @@ class Header extends Component {
                                   </li>
                                 </ul>
                               </div>
-                              {/* End .col-lg-6 */}
+                             
                               <div className="col-lg-6">
                                 <div className="menu-title">
                                   <Link to="#/">Variations 2 </Link>
@@ -338,11 +338,10 @@ class Header extends Component {
                                   </li>
                                 </ul>
                               </div>
-                              {/* End .col-lg-6 */}
+                            
                             </div>
-                            {/* End .row */}
+                           
                           </div>
-                          {/* End .col-lg-8 */}
                           <div className="col-lg-4">
                             <div className="banner">
                               <Link to="#/">
@@ -352,12 +351,9 @@ class Header extends Component {
                                 />
                               </Link>
                             </div>
-                            {/* End .banner */}
                           </div>
-                          {/* End .col-lg-4 */}
                         </div>
                       </div>
-                      {/* End .megamenu */}
                     </li>
                     <li className="megamenu-container">
                       <Link to="#/" className="sf-with-ul">
@@ -392,7 +388,6 @@ class Header extends Component {
                                   </li>
                                 </ul>
                               </div>
-                              {/* End .col-lg-4 */}
                               <div className="col-lg-4">
                                 <div className="menu-title">
                                   <Link to="#/">Variations </Link>
@@ -409,7 +404,6 @@ class Header extends Component {
                                   </li>
                                 </ul>
                               </div>
-                              {/* End .col-lg-4 */}
                               <div className="col-lg-4">
                                 <div className="menu-title">
                                   <Link to="#/">Product Layout Types </Link>
@@ -438,11 +432,8 @@ class Header extends Component {
                                   </li>
                                 </ul>
                               </div>
-                              {/* End .col-lg-4 */}
                             </div>
-                            {/* End .row */}
                           </div>
-                          {/* End .col-lg-8 */}
                           <div className="col-lg-4">
                             <div className="banner">
                               <Link to="#/">
@@ -453,13 +444,9 @@ class Header extends Component {
                                 />
                               </Link>
                             </div>
-                            {/* End .banner */}
                           </div>
-                          {/* End .col-lg-4 */}
                         </div>
-                        {/* End .row */}
                       </div>
-                      {/* End .megamenu */}
                     </li>
                     <li>
                       <Link to="#/" className="sf-with-ul">
@@ -542,10 +529,11 @@ class Header extends Component {
                   </ul>
                 </nav>
               </div>
-              {/* End .header-bottom */}
+             
             </div>
+             */}
             {/* End .header-bottom */}
-
+          
             <div className="mobile-menu-container">
               <div className="mobile-menu-wrapper">
                 <span className="mobile-menu-close">

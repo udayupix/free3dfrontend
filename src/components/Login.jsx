@@ -67,7 +67,6 @@ class Login extends Component {
                   </button>
                   <br />
                   <button type="submit" className="btn btn-primary">
-                    {" "}
                     <Link to="/forgot">Forgot</Link>
                   </button>
                   <GoogleLogin

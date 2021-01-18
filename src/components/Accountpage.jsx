@@ -185,7 +185,7 @@ class Signup extends Component {
                       <li className="active">
                         <Link to="#/">Account Dashboard </Link>
                       </li>
-                      <li>
+                      {/* <li>
                         <Link to="#/">Account Information </Link>
                       </li>
                       <li>
@@ -217,7 +217,7 @@ class Signup extends Component {
                       </li>
                       <li>
                         <Link to="#/">My Downloadable Products </Link>
-                      </li>
+                      </li> */}
                     </ul>
                   </div>
                   {/* End .widget */}
