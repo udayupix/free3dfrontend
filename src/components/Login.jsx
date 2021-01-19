@@ -1,15 +1,44 @@
-import React, { Component } from "react";
+import React from "react";
 import Header from "./Header";
 import Footer from "./Footer";
 import Mobileview from "./Mobileview";
 import { Link } from "react-router-dom";
-import GoogleLogin from "react-google-login";
+import { GoogleLogin } from "react-google-login";
+import Joi from "joi-browser";
+import user from "../services/user";
+import Form from "./common/Form";
+import { toast } from "react-toastify";
 
-class Login extends Component {
-  state = {};
-  responseGoogle = (response) => {
-    console.log(response);
+class Login extends Form {
+ 
+
+  state = { data: { username: "", password: "" }, errors: {} };
+
+  schema = {
+    username: Joi.string().required().label("Username"),
+    password: Joi.string().required().label("Password"),
   };
+
+    responseGoogle = (response) => {
+    console.log(response);
+   
+  };
+
+  doSubmit = async () => {
+    try {
+      const { username, password } = this.state.data;
+      const data = await user.login({ username, password });
+      if (data) {
+        toast.success("Login Success");
+        window.location = "/";
+      }
+    } catch (error) {
+      if (error.response && error.response.status === 400) {
+        toast.error(error.response.data);
+      }
+    }
+  };
+
   render() {
     return (
       <React.Fragment>
@@ -37,46 +66,35 @@ class Login extends Component {
               </div>
               {/* End .heading */}
 
-              <form action="#">
+              <form className="form-group" onSubmit={this.handleSubmit}>
                 <div className="form-group required-field">
-                  <label for="reset-email">Email</label>
-                  <input
-                    type="email"
-                    className="form-control"
-                    id="reset-email"
-                    name="reset-email"
-                    required
-                  />
-                </div>
-                {/* End .form-group */}
-                <div className="form-group required-field">
-                  <label for="reset-email">Password</label>
-                  <input
-                    type="password"
-                    className="form-control"
-                    id="password"
-                    name="password"
-                    required
-                  />
+                  {this.renderInput("username", "Username", "Enter Username")}
+                  {this.renderInput(
+                    "password",
+                    "Password",
+                    "Enter Password",
+                    "password"
+                  )}
                 </div>
                 {/* End .form-group */}
 
+                {/* End .form-group */}
+
                 <div className="form-footer" md>
-                  <button type="submit" className="btn btn-primary">
-                    Submit
-                  </button>
+                  {this.renderButton("Login")}
                   <br />
                   <button type="submit" className="btn btn-primary">
                     <Link to="/forgot">Forgot</Link>
                   </button>
                   <GoogleLogin
-                    clientId="711105711427-fma2jj0n05m1hbmlej7fhkbfuvgguqk7.apps.googleusercontent.com"
+                    clientId="199839528587-4b6j9u96hh69huncn5r1ubs4nrdoud5a.apps.googleusercontent.com"
                     buttonText="Login with Google"
                     onSuccess={this.responseGoogle}
                     onFailure={this.responseGoogle}
-                    cookiePolicy={"single_host_origin"}
+                    
+                    
                   />
-                  ,
+                 
                 </div>
                 {/* End .form-footer */}
               </form>

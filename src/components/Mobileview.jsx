@@ -20,10 +20,10 @@ class Mobileview extends Component {
                   <Link to="/">Home</Link>
                 </li>
                 <li>
-                  <Link to="category.html">Categories</Link>
+                  <Link to="#/">Categories</Link>
                   <ul>
                     <li>
-                      <Link to="category.html">Full Width Banner</Link>
+                      <Link to="#/">Full Width Banner</Link>
                     </li>
                     <li>
                       <Link to="category-banner-boxed-slider.html">
@@ -36,7 +36,7 @@ class Mobileview extends Component {
                       </Link>
                     </li>
                     <li>
-                      <Link to="category.html">Left Sidebar</Link>
+                      <Link to="#/">Left Sidebar</Link>
                     </li>
                     <li>
                       <Link to="category-sidebar-right.html">
@@ -68,27 +68,27 @@ class Mobileview extends Component {
                       </Link>
                     </li>
                     <li>
-                      <Link to="category-3col.html">3 Columns Products</Link>
+                      <Link to="#/">3 Columns Products</Link>
                     </li>
                     <li>
-                      <Link to="category.html">4 Columns Products</Link>
+                      <Link to="#/">4 Columns Products</Link>
                     </li>
                     <li>
-                      <Link to="category-5col.html">5 Columns Products</Link>
+                      <Link to="#/">5 Columns Products</Link>
                     </li>
                     <li>
-                      <Link to="category-6col.html">6 Columns Products</Link>
+                      <Link to="#/l">6 Columns Products</Link>
                     </li>
                     <li>
-                      <Link to="category-7col.html">7 Columns Products</Link>
+                      <Link to="#/">7 Columns Products</Link>
                     </li>
                     <li>
-                      <Link to="category-8col.html">8 Columns Products</Link>
+                      <Link to="#/">8 Columns Products</Link>
                     </li>
                   </ul>
                 </li>
                 <li>
-                  <Link to="product.html">Products</Link>
+                  <Link to="#/">Products</Link>
                   <ul>
                     <li>
                       <Link to="#/">Variations</Link>
@@ -103,7 +103,7 @@ class Mobileview extends Component {
                           </Link>
                         </li>
                         <li>
-                          <Link to="product.html">Inner Zoom</Link>
+                          <Link to="#/">Inner Zoom</Link>
                         </li>
                         <li>
                           <Link to="product-addcart-sticky.html">
@@ -175,7 +175,7 @@ class Mobileview extends Component {
                   </Link>
                   <ul>
                     <li>
-                      <Link to="cart.html">Shopping Cart</Link>
+                      <Link to="#/">Shopping Cart</Link>
                     </li>
                     <li>
                       <Link to="#/">Checkout</Link>
@@ -209,15 +209,15 @@ class Mobileview extends Component {
                   </ul>
                 </li>
                 <li>
-                  <Link to="blog.html">Blog</Link>
+                  <Link to="#/">Blog</Link>
                   <ul>
                     <li>
-                      <Link to="single.html">Blog Post</Link>
+                      <Link to="#/">Blog Post</Link>
                     </li>
                   </ul>
                 </li>
                 <li>
-                  <Link to="contact.html">Contact Us</Link>
+                  <Link to="#/">Contact Us</Link>
                 </li>
               </ul>
             </nav>

@@ -1,11 +1,41 @@
-import React, { Component } from "react";
+import React from "react";
 import Header from "./Header";
 import Footer from "./Footer";
 import Mobileview from "./Mobileview";
 import { Link } from "react-router-dom";
+import Joi from "joi-browser";
+import user from "../services/user";
+import Form from "./common/Form";
+import { toast } from "react-toastify";
 
-class Signup extends Component {
-  state = {};
+class Signup extends Form {
+    state = { data: { email: "",username:"", password: "",confirmpass:""}, errors: {} };
+  schema = {
+    email: Joi.string().email().required().label("Email"),
+    username: Joi.string().required().label("UserName"),
+    password: Joi.string().required().label("Password"),
+    confirmpass:Joi.string().required().label("ConfirmPassword"),
+  };
+
+  doSubmit = async () => {
+   
+    toast.configure();
+    try {
+      const { email,username, password } = this.state.data;
+      console.log(email,username, password );
+      const data = await user.register({ email,username, password});
+      if (data) {
+      
+        toast.success("Signup Success");
+        window.location = "/login";
+      }
+    } catch (error) {
+     
+      if (error.response && error.response.status === 400) {
+        toast.error(error.response.data);
+      }
+    }
+  }; 
   render() {
     return (
       <React.Fragment>
@@ -28,22 +58,24 @@ class Signup extends Component {
                     <p>Please enter your deatils below.</p>
                 </div>{/* End .heading */}
 
-                <form action="#">
-                    <div className="form-group required-field">
-                        <label for="reset-email">Email</label>
-                        <input type="email" className="form-control" id="reset-email" name="reset-email" required/>
-                    </div>{/* End .form-group */}
-                    <div className="form-group required-field">
-                        <label for="reset-email">Password</label>
-                        <input type="password" className="form-control" id="password" name="password" required/>
-                    </div>{/* End .form-group */}
-                    <div className="form-group required-field">
-                        <label for="reset-email">Confirm-Password</label>
-                        <input type="password" className="form-control" id="conformpass" name="conformpass" required/>
-                    </div>{/* End .form-group */}
-
+                <form className="form-group" onSubmit={this.handleSubmit}>
+                {this.renderInput("email", "Email", "Enter Email")}
+                {this.renderInput("username", "UserName", "Enter UserName")}
+                {this.renderInput(
+                    "password",
+                    "Password",
+                    "Enter Password",
+                    "password"
+                  )}
+                   {this.renderInput(
+                    "confirmpass",
+                    "ConfirmPassword",
+                    "Enter ConfirmPassword",
+                    "password"
+                  )}
+                   
                     <div className="form-footer">
-                        <button type="submit" className="btn btn-primary">Submit</button>
+                        { this.renderButton("Login")}
                     </div>{/* End .form-footer */}
                 </form>
             </div>{/* End .container */}

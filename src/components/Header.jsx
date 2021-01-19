@@ -53,6 +53,9 @@ class Header extends Component {
                     <div className="header-menu">
                       <nav>
                         <ul>
+                        <li>
+                            <Link to="/">HOME</Link>
+                          </li>
                           <li>
                             <Link to="/accountpage">
                               {/* <Link to="/accountpage"> */}
@@ -534,7 +537,11 @@ class Header extends Component {
              */}
             {/* End .header-bottom */}
           
-            <div className="mobile-menu-container">
+          
+          </div>
+         
+        </div>
+        <div className="mobile-menu-container">
               <div className="mobile-menu-wrapper">
                 <span className="mobile-menu-close">
                   <i className="icon-retweet"></i>
@@ -759,8 +766,6 @@ class Header extends Component {
               {/* End .mobile-menu-wrapper */}
             </div>
             {/* End .mobile-menu-container */}
-          </div>
-        </div>
       </React.Fragment>
     );
   }

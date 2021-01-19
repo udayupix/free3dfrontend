@@ -3,118 +3,65 @@ import Header from "./Header";
 import Footer from "./Footer";
 import Mobileview from "./Mobileview";
 import { Link } from "react-router-dom";
-import posts from "../services/posts";
-
+import user from '../services/user';
 
 class Home extends Component {
   state = { catts: [] };
   async componentDidMount() {
-    const { data } = await posts.cats();
+    const { data } = await user.getcats()
     this.setState({ catts: data });
   }
 
   render() {
     const { catts } = this.state;
+    console.log(catts);
     return (
       <React.Fragment>
         
         <div className="page-wrapper">
           <Header />
           <main className="main home">
-            <div className="home-top-container">
+            <section className="product-panel mt-9"  >
               
-             
-            </div>
-           
-            <section
-              className="categories-container"
-              style={{ textAlign: "center" }}
-            >
-              <h2>Categories</h2> <br />
-              <div
-                className="container categories-carousel owl-carousel owl-theme"
-                data-toggle="owl"
-                data-owl-options="{
-                    'loop' : true,
-                    'margin': 30,
-                    'nav': false,
-                    'dots': true,
-                
-                    'autoHeight': true,
-                    'responsive': {
-                      '0': {
-                        'items': 2,
-                        'margin': 0
-                      },
-                      '576': {
-                        'items': 3
-                      },
-                      '768': {
-                        'items': 4
-                      },
-                      '992': {
-                        'items': 5
-                      },
-                      '1200': {
-                        'items': 6
-                      }
-                    }
-                }"
-              >
-                <div className="category">
-                  <i className="fas fa-building"></i>
-                  <br />
-                  <span>Fashion</span>
+                <div className="section-title"   >
+                  <h2 style={{textAlign:"center",fontSize:"25px",fontStyle:"normal"}}>Categories</h2> <br/>
                 </div>
-                <div className="category">
-                  <i className="icon-category-electronics"></i>
-                  <span>{catts.name}</span>
+               
+                <div className="product-intro divide-line" style={{display:"flex",flexDirection:"row",justifyContent:"center"}} >
+            
+                  {/* <div className="col-9 col-lg-1 col-md-2 col-sm-4 product-default inner-quickview inner-icon" style={{minHeight:"10"}}>
+                  <div className="category">
+                    <i className="fas fa-building"></i>
+                    <br />
+                    <span>Fashion</span>
+                  </div>
+                   
+                  </div> */}
+                  {catts && catts.length > 0 && catts.map((cat, ind)=> (
+                    <div className="  col-9 col-lg-1 col-md-1 col-sm-1 category" key={ind}>
+                    <br/>
+                    <br/>
+                    <figure>
+                      <Link to="product.html">
+                      
+                    <i className={cat.icon}></i>
+                    <br />
+                    <span>{cat.name}</span>
+                  
+                      </Link>
+                      </figure>
+                    {/* End .product-details*/}
+                  </div>
+                 
+                  ))}
+
                 </div>
-                <div className="category">
-                  <i className="icon-gift"></i>
-                  <span>Gift</span>
-                </div>
-                <div className="category">
-                  <i className="icon-category-garden"></i>
-                  <span>Garden</span>
-                </div>
-                <div className="category">
-                  <i className="icon-category-music"></i>
-                  <span>Music</span>
-                </div>
-                <div className="category">
-                  <i className="icon-category-motors"></i>
-                  <span>Motors</span>
-                </div>
-                <div className="category">
-                  <i className="icon-category-fashion"></i>
-                  <span>Fashion</span>
-                </div>
-                <div className="category">
-                  <i className="icon-category-electronics"></i>
-                  <span>Electronics</span>
-                </div>
-                <div className="category">
-                  <i className="icon-gift"></i>
-                  <span>Gift</span>
-                </div>
-                <div className="category">
-                  <i className="icon-category-garden"></i>
-                  <span>Garden</span>
-                </div>
-                <div className="category">
-                  <i className="icon-category-music"></i>
-                  <span>Music</span>
-                </div>
-                <div className="category">
-                  <i className="icon-category-motors"></i>
-                  <span>Motors</span>
-                </div>
-              </div>
-              {/* End .categories-carousel */}
+              
+
+
+
             </section>
-            <br />
-            <br />
+           
             <section className="product-panel mt-5">
               <div className="container">
                 <div className="section-title">
@@ -389,7 +336,7 @@ class Home extends Component {
                             category
                           </Link>
                         </div> 
-                        {/* this */}
+                        {/* thi */}
                         <Link to="#/" className="btn-icon-wish">
                           <i className="icon-heart"></i>
                         </Link>
@@ -487,12 +434,12 @@ class Home extends Component {
                 <div className="product-intro divide-line mt-2 mb-8">
                   <div className="col-6 col-lg-2 col-md-3 col-sm-4 product-default inner-quickview inner-icon">
                     <figure>
-                      <a href="product.html">
+                      <Link to="product.html">
                         <img
                           src="assets/images/products/product-7.jpg"
                           alt="ss"
                         />
-                      </a>
+                      </Link>
                       <div className="btn-icon-group">
                         <button
                           className="btn-icon btn-add-cart"
