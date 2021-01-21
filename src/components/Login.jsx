@@ -10,8 +10,6 @@ import Form from "./common/Form";
 import { toast } from "react-toastify";
 
 class Login extends Form {
- 
-
   state = { data: { username: "", password: "" }, errors: {} };
 
   schema = {
@@ -19,9 +17,21 @@ class Login extends Form {
     password: Joi.string().required().label("Password"),
   };
 
-    responseGoogle = (response) => {
-    console.log(response);
-   
+  responseGoogle = async (response) => {
+    try {
+      console.log(response.tokenId);
+      console.log(response);
+      const data = await user.glogin({ token: response.tokenId });
+
+      if (data) {
+        toast.success("Login Success");
+        window.location = "/";
+      }
+    } catch (error) {
+      if (error.response && error.response.status === 400) {
+        toast.error(error.response.data);
+      }
+    }
   };
 
   doSubmit = async () => {
@@ -91,10 +101,7 @@ class Login extends Form {
                     buttonText="Login with Google"
                     onSuccess={this.responseGoogle}
                     onFailure={this.responseGoogle}
-                    
-                    
                   />
-                 
                 </div>
                 {/* End .form-footer */}
               </form>

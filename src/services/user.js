@@ -14,6 +14,13 @@ const user = {
     localStorage.setItem(tokenKey, jwt);
     return jwt;
   },
+  
+  glogin: async (gloginobj) => {
+    const { data: jwt } = await http.post(userEndpoint + "/glogin", gloginobj);
+    localStorage.setItem(tokenKey, jwt);
+    return jwt;
+  },
+
   register: async (registerobj) => {
     const { data: jwt } = await http.post(
       userEndpoint + "/register",
@@ -25,9 +32,15 @@ const user = {
 
   logout: () => {
     localStorage.removeItem(tokenKey);
+
   },
+
   getcats: async () => {
     return await http.post(userEndpoint + "/getcats");
+  },
+
+  getsfts: async () => {
+    return await http.post(userEndpoint + "/getsftss");
   },
 
   getCurrentUser: () => {

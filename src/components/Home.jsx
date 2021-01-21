@@ -3,65 +3,115 @@ import Header from "./Header";
 import Footer from "./Footer";
 import Mobileview from "./Mobileview";
 import { Link } from "react-router-dom";
-import user from '../services/user';
+import user from "../services/user";
 
 class Home extends Component {
-  state = { catts: [] };
+  state = { catts: [], sfts: [] };
   async componentDidMount() {
-    const { data } = await user.getcats()
-    this.setState({ catts: data });
+    const { data } = await user.getcats();
+    const datat = await user.getsfts();
+    this.setState({ catts: data, sfts: datat.data });
   }
 
   render() {
-    const { catts } = this.state;
-    console.log(catts);
+    const { catts, sfts } = this.state;
+    console.log(catts, sfts);
+
     return (
       <React.Fragment>
-        
         <div className="page-wrapper">
           <Header />
           <main className="main home">
-            <section className="product-panel mt-9"  >
-              
-                <div className="section-title"   >
-                  <h2 style={{textAlign:"center",fontSize:"25px",fontStyle:"normal"}}>Categories</h2> <br/>
-                </div>
-               
-                <div className="product-intro divide-line" style={{display:"flex",flexDirection:"row",justifyContent:"center"}} >
-            
-                  {/* <div className="col-9 col-lg-1 col-md-2 col-sm-4 product-default inner-quickview inner-icon" style={{minHeight:"10"}}>
-                  <div className="category">
-                    <i className="fas fa-building"></i>
-                    <br />
-                    <span>Fashion</span>
-                  </div>
-                   
-                  </div> */}
-                  {catts && catts.length > 0 && catts.map((cat, ind)=> (
-                    <div className="  col-9 col-lg-1 col-md-1 col-sm-1 category" key={ind}>
-                    <br/>
-                    <br/>
-                    <figure>
-                      <Link to="product.html">
-                      
-                    <i className={cat.icon}></i>
-                    <br />
-                    <span>{cat.name}</span>
-                  
-                      </Link>
+            <section className="product-panel mt-9">
+              <div className="section-title">
+                <h2
+                  style={{
+                    textAlign: "center",
+                    fontSize: "25px",
+                    fontStyle: "normal",
+                  }}
+                >
+                  Categories
+                </h2>{" "}
+                <br />
+              </div>
+
+              <div
+                className="product-intro divide-line"
+                style={{
+                  display: "flex",
+                  flexDirection: "row",
+                  justifyContent: "center",
+                }}
+              >
+                {catts &&
+                  catts.length > 0 &&
+                  catts.map((cat, ind) => (
+                    <div
+                      className="  col-9 col-lg-1 col-md-1 col-sm-1 category"
+                      key={ind}
+                    >
+                      <br />
+                      <br />
+                      <figure>
+                        <Link to="product.html">
+                          <i className={cat.icon}></i>
+                          <br />
+                          <span>{cat.name}</span>
+                        </Link>
                       </figure>
-                    {/* End .product-details*/}
-                  </div>
-                 
+                      {/* End .product-details*/}
+                    </div>
                   ))}
-
-                </div>
-              
-
-
-
+              </div>
             </section>
-           
+
+            <section className="product-panel mt-9">
+              <div className="section-title">
+                <h2
+                  style={{
+                    textAlign: "center",
+                    fontSize: "25px",
+                    fontStyle: "normal",
+                  }}
+                >
+                  Softwaretypes
+                </h2>{" "}
+                <br />
+              </div>
+
+              <div
+                className="product-intro divide-line"
+                style={{
+                  display: "flex",
+                  flexDirection: "row",
+                  justifyContent: "center",
+                 alignItems:"center"
+                }}
+              >
+                {sfts &&
+                  sfts.length > 0 &&
+                  sfts.map((sft, sfs) => (
+                    <div
+                      className="  col-9 col-lg-1 col-md-1 col-sm-1 category" 
+                      key={sfs}
+                    >
+                      <br />
+                      <br />
+                      
+                      <figure>
+                        <Link to="product.html" >
+                          <div className=""><img src={sft.icon} alt="ss" style={{height:55,width:55, marginLeft:"auto",marginRight:"auto"}}></img></div>
+                          <br /> <br />
+                          <span>{sft.name}</span>
+                        </Link>
+                      </figure>
+                      {/* End .product-details*/}
+                    </div>
+                  ))}
+              </div>
+            </section>
+
             <section className="product-panel mt-5">
               <div className="container">
                 <div className="section-title">
@@ -335,7 +385,7 @@ class Home extends Component {
                           <Link to="category.html" className="product-category">
                             category
                           </Link>
-                        </div> 
+                        </div>
                         {/* thi */}
                         <Link to="#/" className="btn-icon-wish">
                           <i className="icon-heart"></i>
