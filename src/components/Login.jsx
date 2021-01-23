@@ -3,7 +3,7 @@ import Header from "./Header";
 import Footer from "./Footer";
 import Mobileview from "./Mobileview";
 import { Link } from "react-router-dom";
-import { GoogleLogin } from "react-google-login";
+// import { GoogleLogin } from "react-google-login";
 import Joi from "joi-browser";
 import user from "../services/user";
 import Form from "./common/Form";
@@ -35,6 +35,7 @@ class Login extends Form {
   };
 
   doSubmit = async () => {
+    toast.configure()
     try {
       const { username, password } = this.state.data;
       const data = await user.login({ username, password });
@@ -96,12 +97,13 @@ class Login extends Form {
                   <button type="submit" className="btn btn-primary">
                     <Link to="/forgot">Forgot</Link>
                   </button>
-                  <GoogleLogin
+                  {/* <GoogleLogin
                     clientId="199839528587-4b6j9u96hh69huncn5r1ubs4nrdoud5a.apps.googleusercontent.com"
                     buttonText="Login with Google"
+                  
                     onSuccess={this.responseGoogle}
                     onFailure={this.responseGoogle}
-                  />
+                  /> */}
                 </div>
                 {/* End .form-footer */}
               </form>

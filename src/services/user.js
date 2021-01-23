@@ -39,6 +39,10 @@ const user = {
     return await http.post(userEndpoint + "/getcats");
   },
 
+  forgotpass: async (fpobj) => {
+    return await http.post(userEndpoint + "/forgotpass", fpobj);
+  },
+
   getsfts: async () => {
     return await http.post(userEndpoint + "/getsftss");
   },

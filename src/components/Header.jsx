@@ -1,15 +1,27 @@
 import React, { Component } from "react";
-
+import user from "../services/user";
 import { Link } from "react-router-dom";
 class Header extends Component {
   state = {};
+
+  logouttt = () => {
+    user.logout();
+  };
+
   render() {
     return (
       <React.Fragment>
         <div className="page-wrapper ">
-          <div className="header ">
-            <div className="header-top   ">
-              <div className="container ">
+          <div className="header">
+            <div className="header-top">
+              <div
+                className="container"
+                style={{
+                  position: "-webkit-sticky",
+                  scrollMarginTop: "100",
+                  width: "100%",
+                }}
+              >
                 <div className="header-left header-dropdowns">
                   <div className="header-dropdown">
                     <Link to="#/">USD </Link>
@@ -53,26 +65,42 @@ class Header extends Component {
                     <div className="header-menu">
                       <nav>
                         <ul>
-                        <li>
+                          <li>
                             <Link to="/">HOME</Link>
                           </li>
-                          <li>
-                            <Link to="/accountpage">
-                              {/* <Link to="/accountpage"> */}
-                              MY ACCOUNT
-                            </Link>
-                          </li>
+                          {user.getCurrentUser() && (
+                            <React.Fragment>
+                              <li>
+                                <Link to="/accountpage">
+                                  {/* <Link to="/accountpage"> */}
+                                  MY ACCOUNT
+                                </Link>
+                              </li>
 
-                          <li>
-                            <Link to="/cart">MY WISHLIST </Link>
-                          </li>
+                              <li>
+                                <Link to="/cart">MY WISHLIST </Link>
+                              </li>
+                            </React.Fragment>
+                          )}
 
-                          <li>
-                            <Link to="/signup">SIGN UP </Link>
-                          </li>
-                          <li>
-                            <Link to="/login">LOG IN</Link>
-                          </li>
+                          {!user.getCurrentUser() ? (
+                            <React.Fragment>
+                              <li>
+                                <Link to="/signup">SIGN UP </Link>
+                              </li>
+                              <li>
+                                <Link to="/login">LOG IN</Link>
+                              </li>
+                            </React.Fragment>
+                          ) : (
+                            <React.Fragment>
+                              <li>
+                                <Link to="/" onClick={() => this.logouttt()}>
+                                  LOG OUT
+                                </Link>
+                              </li>
+                            </React.Fragment>
+                          )}
                         </ul>
                       </nav>
                     </div>
@@ -536,236 +564,219 @@ class Header extends Component {
             </div>
              */}
             {/* End .header-bottom */}
-          
-          
           </div>
-         
         </div>
         <div className="mobile-menu-container">
-              <div className="mobile-menu-wrapper">
-                <span className="mobile-menu-close">
-                  <i className="icon-retweet"></i>
-                </span>
-                <nav className="mobile-nav">
-                  <ul className="mobile-menu">
-                    <li className="active">
-                      <Link to="#/">Home </Link>
+          <div className="mobile-menu-wrapper">
+            <span className="mobile-menu-close">
+              <i className="icon-retweet"></i>
+            </span>
+            <nav className="mobile-nav">
+              <ul className="mobile-menu">
+                <li className="active">
+                  <Link to="#/">Home </Link>
+                </li>
+                <li>
+                  <Link to="category.html">Categories </Link>
+                  <ul>
+                    <li>
+                      <Link to="category.html">Full Width Banner </Link>
                     </li>
                     <li>
-                      <Link to="category.html">Categories </Link>
-                      <ul>
-                        <li>
-                          <Link to="category.html">Full Width Banner </Link>
-                        </li>
-                        <li>
-                          <Link to="category-banner-boxed-slider.html">
-                            Boxed Slider Banner
-                          </Link>
-                        </li>
-                        <li>
-                          <Link to="category-banner-boxed-image.html">
-                            Boxed Image Banner
-                          </Link>
-                        </li>
-                        <li>
-                          <Link to="category.html">Left Sidebar </Link>
-                        </li>
-                        <li>
-                          <Link to="category-sidebar-right.html">
-                            Right Sidebar
-                          </Link>
-                        </li>
-                        <li>
-                          <Link to="category-flex-grid.html">
-                            Product Flex Grid
-                          </Link>
-                        </li>
-                        <li>
-                          <Link to="category-horizontal-filter1.html">
-                            Horizontal Filter 1
-                          </Link>
-                        </li>
-                        <li>
-                          <Link to="category-horizontal-filter2.html">
-                            Horizontal Filter 2
-                          </Link>
-                        </li>
-                        <li>
-                          <Link to="#/">Product List Item Types </Link>
-                        </li>
-                        <li>
-                          <Link to="category-infinite-scroll.html">
-                            Ajax Infinite Scroll
-                            <span className="tip tip-new">New</span>
-                          </Link>
-                        </li>
-                        <li>
-                          <Link to="category-3col.html">
-                            3 Columns Products{" "}
-                          </Link>
-                        </li>
-                        <li>
-                          <Link to="category.html">4 Columns Products </Link>
-                        </li>
-                        <li>
-                          <Link to="category-5col.html">
-                            5 Columns Products{" "}
-                          </Link>
-                        </li>
-                        <li>
-                          <Link to="category-6col.html">
-                            6 Columns Products{" "}
-                          </Link>
-                        </li>
-                        <li>
-                          <Link to="category-7col.html">
-                            7 Columns Products{" "}
-                          </Link>
-                        </li>
-                        <li>
-                          <Link to="category-8col.html">
-                            8 Columns Products{" "}
-                          </Link>
-                        </li>
-                      </ul>
-                    </li>
-                    <li>
-                      <Link to="#/">Products </Link>
-                      <ul>
-                        <li>
-                          <Link to="#/">Variations </Link>
-                          <ul>
-                            <li>
-                              <Link to="#/">Horizontal Thumbnails</Link>
-                            </li>
-                            <li>
-                              <Link to="#/">
-                                Vertical Thumbnails
-                                <span className="tip tip-hot">Hot!</span>
-                              </Link>
-                            </li>
-                            <li>
-                              <Link to="#/">Inner Zoom </Link>
-                            </li>
-                            <li>
-                              <Link to="#/">Addtocart Sticky</Link>
-                            </li>
-                            <li>
-                              <Link to="#/">Accordion Tabs</Link>
-                            </li>
-                          </ul>
-                        </li>
-                        <li>
-                          <Link to="#/">Variations </Link>
-                          <ul>
-                            <li>
-                              <Link to="#/">Sticky Tabs</Link>
-                            </li>
-                            <li>
-                              <Link to="p#/">Simple Product</Link>
-                            </li>
-                            <li>
-                              <Link to="#/">With Left Sidebar</Link>
-                            </li>
-                          </ul>
-                        </li>
-                        <li>
-                          <Link to="#/">Product Layout Types </Link>
-                          <ul>
-                            <li>
-                              <Link to="#/">Default Layout </Link>
-                            </li>
-                            <li>
-                              <Link to="#/">Extended Layout</Link>
-                            </li>
-                            <li>
-                              <Link to="#/">Full Width Layout</Link>
-                            </li>
-                            <li>
-                              <Link to="#/">Grid Images Layout</Link>
-                            </li>
-                            <li>
-                              <Link to="#/">
-                                Sticky Both Side Info
-                                <span className="tip tip-hot">Hot!</span>
-                              </Link>
-                            </li>
-                            <li>
-                              <Link to="p#/">Sticky Right Side Info</Link>
-                            </li>
-                          </ul>
-                        </li>
-                      </ul>
-                    </li>
-                    <li>
-                      <Link to="#/">
-                        Pages<span className="tip tip-hot">Hot!</span>
+                      <Link to="category-banner-boxed-slider.html">
+                        Boxed Slider Banner
                       </Link>
+                    </li>
+                    <li>
+                      <Link to="category-banner-boxed-image.html">
+                        Boxed Image Banner
+                      </Link>
+                    </li>
+                    <li>
+                      <Link to="category.html">Left Sidebar </Link>
+                    </li>
+                    <li>
+                      <Link to="category-sidebar-right.html">
+                        Right Sidebar
+                      </Link>
+                    </li>
+                    <li>
+                      <Link to="category-flex-grid.html">
+                        Product Flex Grid
+                      </Link>
+                    </li>
+                    <li>
+                      <Link to="category-horizontal-filter1.html">
+                        Horizontal Filter 1
+                      </Link>
+                    </li>
+                    <li>
+                      <Link to="category-horizontal-filter2.html">
+                        Horizontal Filter 2
+                      </Link>
+                    </li>
+                    <li>
+                      <Link to="#/">Product List Item Types </Link>
+                    </li>
+                    <li>
+                      <Link to="category-infinite-scroll.html">
+                        Ajax Infinite Scroll
+                        <span className="tip tip-new">New</span>
+                      </Link>
+                    </li>
+                    <li>
+                      <Link to="category-3col.html">3 Columns Products </Link>
+                    </li>
+                    <li>
+                      <Link to="category.html">4 Columns Products </Link>
+                    </li>
+                    <li>
+                      <Link to="category-5col.html">5 Columns Products </Link>
+                    </li>
+                    <li>
+                      <Link to="category-6col.html">6 Columns Products </Link>
+                    </li>
+                    <li>
+                      <Link to="category-7col.html">7 Columns Products </Link>
+                    </li>
+                    <li>
+                      <Link to="category-8col.html">8 Columns Products </Link>
+                    </li>
+                  </ul>
+                </li>
+                <li>
+                  <Link to="#/">Products </Link>
+                  <ul>
+                    <li>
+                      <Link to="#/">Variations </Link>
                       <ul>
                         <li>
-                          <Link to="cart.html">Shopping Cart </Link>
+                          <Link to="#/">Horizontal Thumbnails</Link>
                         </li>
                         <li>
-                          <Link to="#/">Checkout </Link>
-                          <ul>
-                            <li>
-                              <Link to="/cart">Checkout Shipping</Link>
-                            </li>
-                            <li>
-                              <Link to="checkout-shipping-2.html">
-                                Checkout Shipping 2
-                              </Link>
-                            </li>
-                            <li>
-                              <Link to="checkout-review.html">
-                                Checkout Review
-                              </Link>
-                            </li>
-                          </ul>
-                        </li>
-                        <li>
-                          <Link to="about.html">About </Link>
-                        </li>
-                        <li>
-                          <Link to="#/" className="login-link">
-                            Login
+                          <Link to="#/">
+                            Vertical Thumbnails
+                            <span className="tip tip-hot">Hot!</span>
                           </Link>
                         </li>
                         <li>
-                          <Link to="forgot-password.html">
-                            Forgot Password{" "}
-                          </Link>
+                          <Link to="#/">Inner Zoom </Link>
+                        </li>
+                        <li>
+                          <Link to="#/">Addtocart Sticky</Link>
+                        </li>
+                        <li>
+                          <Link to="#/">Accordion Tabs</Link>
                         </li>
                       </ul>
                     </li>
                     <li>
-                      <Link to="blog.html">Blog </Link>
+                      <Link to="#/">Variations </Link>
                       <ul>
                         <li>
-                          <Link to="single.html">Blog Post </Link>
+                          <Link to="#/">Sticky Tabs</Link>
+                        </li>
+                        <li>
+                          <Link to="p#/">Simple Product</Link>
+                        </li>
+                        <li>
+                          <Link to="#/">With Left Sidebar</Link>
+                        </li>
+                      </ul>
+                    </li>
+                    <li>
+                      <Link to="#/">Product Layout Types </Link>
+                      <ul>
+                        <li>
+                          <Link to="#/">Default Layout </Link>
+                        </li>
+                        <li>
+                          <Link to="#/">Extended Layout</Link>
+                        </li>
+                        <li>
+                          <Link to="#/">Full Width Layout</Link>
+                        </li>
+                        <li>
+                          <Link to="#/">Grid Images Layout</Link>
+                        </li>
+                        <li>
+                          <Link to="#/">
+                            Sticky Both Side Info
+                            <span className="tip tip-hot">Hot!</span>
+                          </Link>
+                        </li>
+                        <li>
+                          <Link to="p#/">Sticky Right Side Info</Link>
                         </li>
                       </ul>
                     </li>
                   </ul>
-                </nav>
-                {/* End .mobile-nav */}
+                </li>
+                <li>
+                  <Link to="#/">
+                    Pages<span className="tip tip-hot">Hot!</span>
+                  </Link>
+                  <ul>
+                    <li>
+                      <Link to="cart.html">Shopping Cart </Link>
+                    </li>
+                    <li>
+                      <Link to="#/">Checkout </Link>
+                      <ul>
+                        <li>
+                          <Link to="/cart">Checkout Shipping</Link>
+                        </li>
+                        <li>
+                          <Link to="checkout-shipping-2.html">
+                            Checkout Shipping 2
+                          </Link>
+                        </li>
+                        <li>
+                          <Link to="checkout-review.html">Checkout Review</Link>
+                        </li>
+                      </ul>
+                    </li>
+                    <li>
+                      <Link to="about.html">About </Link>
+                    </li>
+                    <li>
+                      <Link to="#/" className="login-link">
+                        Login
+                      </Link>
+                    </li>
+                    <li>
+                      <Link to="forgot-password.html">Forgot Password </Link>
+                    </li>
+                  </ul>
+                </li>
+                <li>
+                  <Link to="blog.html">Blog </Link>
+                  <ul>
+                    <li>
+                      <Link to="single.html">Blog Post </Link>
+                    </li>
+                  </ul>
+                </li>
+              </ul>
+            </nav>
+            {/* End .mobile-nav */}
 
-                <div className="social-icons">
-                  <Link to="#/" className="social-icon" target="_blank">
-                    <i className="icon-facebook"></i>
-                  </Link>
-                  <Link to="#/" className="social-icon" target="_blank">
-                    <i className="icon-twitter"></i>
-                  </Link>
-                  <Link to="#/" className="social-icon" target="_blank">
-                    <i className="icon-instagram"></i>
-                  </Link>
-                </div>
-                {/* End .social-icons */}
-              </div>
-              {/* End .mobile-menu-wrapper */}
+            <div className="social-icons">
+              <Link to="#/" className="social-icon" target="_blank">
+                <i className="icon-facebook"></i>
+              </Link>
+              <Link to="#/" className="social-icon" target="_blank">
+                <i className="icon-twitter"></i>
+              </Link>
+              <Link to="#/" className="social-icon" target="_blank">
+                <i className="icon-instagram"></i>
+              </Link>
             </div>
-            {/* End .mobile-menu-container */}
+            {/* End .social-icons */}
+          </div>
+          {/* End .mobile-menu-wrapper */}
+        </div>
+        {/* End .mobile-menu-container */}
       </React.Fragment>
     );
   }

@@ -14,6 +14,7 @@ import Add from './components/Add'
 import Premium from "./components/Premium";
 import Free from "./components/Free";
 import FileUpload from "./components/FileUpload";
+import ResetPass from "./components/ResetPass";
 
 class App extends Component {
   state = {};
@@ -35,6 +36,7 @@ class App extends Component {
           <Route path="/free" component={Free} />
           <Route path="/premium" component={Premium} />
           <Route path="/file" component={FileUpload} />
+          <Route path="/reset/:id" component={ResetPass} />
         </Switch>
       </Router>
     );
